@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet');
+*{
+  box-sizing: border-box; 
+}
+
+body {
+    background: #404040;
+    color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Mono', monospace;
+  }
+  
+header{
+    text-align: center;
+    font-family: 'Ubuntu Mono', monospace;
+    display: inline-block;
+}
+
+header > h1{
+    color: black;
+    position: fixed;
+    z-index: 99;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    top: -20px;
+    left:  585px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.badge{
+  background: #888888;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 100px;
+  transition: all 1s;
+  padding: 15px;
+  
+}
+
+.visualization{
+  display: inline-flex;
+  font-family: 'Ubuntu Mono', monospace;
+  width: 30px;
+}
+
+#lines{
+  z-index: 99;
+  position: absolute;
+  top: 800px;
+  left: 215px;
+}
+
+#statistics {
+  z-index: 99;
+  position: absolute;
+  top: 800px;
+  left: 300px;
+}
+
+#network{
+  z-index: 99;
+  position: absolute;
+  top: 800px;
+  left: 100px;
+}
+
+.addition{
+  z-index: 99;
+  background: none;
+  position: absolute;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  top: 840px;
+  right: 30px;
+  padding: 10px;
+  border: none;
+  transition: all 1s;
+}
+
+#aboutText{
+  z-index: 99;
+  background: none;
+  position: absolute;
+  font-size: 15px;
+}
+/*
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  z-index: 99;
+  top: 700px;
+  left: 1400px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*actual pop up
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgb(46, 46, 46);
+  color: rgb(252, 252, 252);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: relative;
+  z-index: 99;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+
+}
+/*Arrow pop up
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+/*hide and show pop up
+.popup .show{
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn;
+
+}
+/*add animation 
+@-webkit-keyframes fadeIn{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn{
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+*/
+
+#myBtn {
+  z-index: 99;
+  background: none;
+  position: absolute;
+  font-size: 15px;
+  border: none;
+  top: 820px;
+  left: 1370px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: whitesmoke(110, 170, 170);
+  z-index: 99;
+  margin: auto;
+  padding: 10px;
+  padding: 20px;
+  border: 0.5px solid rgb(175, 175, 175); 
+  width: 80%;
+  font-family: 'Ubuntu Mono', monospace;
+  border-radius: 15px;
+}
+
+/* The Close Button */
+.close {
+  color: #292929;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.av{
+  position: absolute;
+  z-index: 99;
+}
+
+#lines-content{
+  position: absolute;
+  z-index: 1;
+  color: whitesmoke;
+  background: #888888;
+  border: 2px solid white;
+  border-radius: 4px;
+  right: 20px;
+  font-family: 'Ubuntu', monospace;
+  padding: 15px;
+}
+
+.cbn {
+  font-weight: bold;
+}
+
+.lines > h3{
+  font-weight: bold;
+}
+/*
+.container{
+  position: absolute;
+  z-index: 99;
+  background: red;
+  left: 200px;
+}
+*/
+.badge:hover{
+  cursor: pointer;
+  background: rgb(88, 141, 63);
+}
+
+#myBtn:hover{
+  cursor: pointer;
+  color: rgb(88, 141, 63);
+}
+  
+#map {
+    border-left: 1px solid #fff;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+  }
+  
