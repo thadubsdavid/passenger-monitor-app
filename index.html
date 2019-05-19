@@ -24,45 +24,53 @@
 
     </head>
 
-<body>
+  <body>
         <header>
             <h1>Passenger Flow Karlsruhe</h1>
         </header>
 
         <div class="visualization">
-            <input type="button" id="lines" value="LINES" class="badge"
-            onclick= "showLinesFun()"/>
-            <input type="button" id="network" value="NETWORK" class="badge"
-            onclick="showNetworkFun()"/>
-            <input type="button" id="statistics" value="STATISTICS" class="badge"
-            onclick="showStatisticsFun()"/>
+            <input type="button" id="lines" value="LINES" class="badge"/>
+            <input type="button" id="network" value="NETWORK" class="badge"/>
         </div>
 
-        <!--div class="popup" onclick="showAbout()">ABOUT
-          <span class="popuptext" id="aboutPopup" style="white-space: pre-line">TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
-        </div-->
 
-        <!-- The Modal ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-        <button id="myBtn">ABOUT</button>
+        <!-- STATISTICS MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
-        <div id="myModal" class="modal">
+        <button id="statisticsBtn" class="badge">STATISTICS</button>
 
-          <div class="modal-content">
-              <span class="close">&times;</span>
+        <div id="statisticsModal" class="statModal">
+
+          <div class="statModalContent">
+            <span class="statClose">&times;</span>
+            <p> Here some charts by Tableau </p>
+            <img src="dashboardExperiment.png" alt="statisticsDashboard" width="1100" height="500"> 
+          </div>
+
+        </div>
+
+
+        <!-- ABOUT MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        
+        <button id="aboutBtn">ABOUT</button>
+        
+        <div id="aboutModal" class="abModal">
+
+          <div class="aboutModalContent">
+              <span class="aboutClose">&times;</span>
               <p>About this project... <br> About Developer.. <br> Sources links....</p> 
           </div>
 
         </div>
-        
-        <!--div class="addition">
-            <button id="about" onclick="getElementById('aboutText')">ABOUT</button>
-            <input type="button" value="ABOUT" id="about" class="addition" onclick="getElementById"/>
-        </div-->
+      
 
+        <!-- MAP MAPBOX ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
         <div id='map' class='map'></div>
-
         <script src="app.js"></script>
+
+
+        <!-- SLIDER  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
         <div id = 'controls'>
       
@@ -83,14 +91,17 @@
         </div>
 
 
-          <div class="container">
+        <div class="container">
             <h2>TIME</h2>
             <div class="slider"></div>
               <div class="col-sm-2"><p id="value-time"></p></div>
               <div class="col-sm-2"><p id="slider-time"></p></div>
-            </div>
+        </div>
 
-      <div id='sidebar'>
+
+      <!-- SIDEBAR LINES ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+      <div id='sidebarLine'>
 
         <div id='lines-content'>
 
@@ -99,47 +110,95 @@
             </div>
   
             <div class='line'>
-              <input type='checkbox' id='cb1' class='cbn' checked>
+              <input type='checkbox' id='lin1' class='lin' checked>
               <span>&nbsp;Tram 1</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='cb2' class='cbn' checked>
+              <input type='checkbox' id='lin2' class='lin' checked>
               <span>&nbsp;Tram 2</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='cb3' class='cbn' checked>
+              <input type='checkbox' id='lin3' class='lin' checked>
               <span>&nbsp;Tram 3</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='cb4' class='cbn' checked>
+              <input type='checkbox' id='lin4' class='lin' checked>
               <span>&nbsp;Tram 5</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='cb5' class='cbn' checked>
+              <input type='checkbox' id='lin5' class='lin' checked>
               <span>&nbsp;Tram 6</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='cb6' class='cbn' checked>
+              <input type='checkbox' id='lin6' class='lin' checked>
               <span>&nbsp;S1</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='cb7' class='cbn' checked>
+              <input type='checkbox' id='lin7' class='lin' checked>
               <span>&nbsp;S2</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='cb8' class='cbn' checked>
+              <input type='checkbox' id='lin8' class='lin' checked>
               <span>&nbsp;S5</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='cb9' class='cbn' checked>
+              <input type='checkbox' id='lin9' class='lin' checked>
               <span>&nbsp;S7</span>
             </div>
             
-  </div>
+          </div>
   
-  </div>
+        </div>
 
-</body>
+
+        <!-- SIDEBAR SUBURBS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+        <div id='sidebarSuburb'>
+
+          <div id='suburb-content'>
+  
+              <div class='suburb'>
+                <h3>Karlsruhe -&nbsp;Suburbs:</h3>
+              </div>
+    
+              <div class='suburb'>
+                <input type='checkbox' id='sub1' class='sub' checked>
+                <span>&nbsp;Innenstadt West</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub2' class='sub' checked>
+                <span>&nbsp;Innenstadt Ost</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub3' class='sub' checked>
+                <span>&nbsp;Nordstadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub4' class='sub' checked>
+                <span>&nbsp;Weststadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub5' class='sub' checked>
+                <span>&nbsp;Oststadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub' class='sub' checked>
+                <span>&nbsp;Südstadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub7' class='sub' checked>
+                <span>&nbsp;Nordweststadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub8' class='sub' checked>
+                <span>&nbsp;Südweststadt</span>
+              </div>
+              
+            </div>
+    
+          </div>
+
+  </body>
 
 
 </html>

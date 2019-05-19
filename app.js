@@ -142,32 +142,54 @@ map.on('load', function () {
 })
 
 
-//Modal------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-var modal = document.getElementById("myModal");
+//Modal ABOUT------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+var abModal = document.getElementById("aboutModal");
 
 //Get button that opens the modal
-var btn = document.getElementById("myBtn");
+var abButton = document.getElementById("aboutBtn");
 
 //Get the <span> element that closes modal
-var span = document.getElementsByClassName("close")[0];
+var abSpan = document.getElementsByClassName("aboutClose")[0];
 
 //When the user clicks the button -> open the modal 
-btn.onclick = function() {
-  modal.style.display = "inline-block";
+abButton.onclick = function() {
+  abModal.style.display = "inline-block";
 }
 
 // When the user clicks on "x" -> close modal
-span.onclick = function() {
-  modal.style.display = "none";
+abSpan.onclick = function() {
+  abModal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+
+//Modal STATISTICS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+var statModal = document.getElementById("statisticsModal");
+
+//Variables Changed
+var statButton = document.getElementById("statisticsBtn");
+
+//Variables changed
+var statSpan = document.getElementsByClassName("statClose")[0];
+
+//When the user clicks the button -> open the modal 
+statButton.onclick = function() {
+  statModal.style.display = "inline-block";
+}
+
+// When the user clicks on "x" -> close modal
+statSpan.onclick = function() {
+  statModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of either modal itll be closed
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == abModal) {
+    abModal.style.display = "none";
+  }
+  if (event.target == statModal) {
+    statModal.style.display = "none";
   }
 }
-
 
 
 //Slider------------------------------------------------------------------------

@@ -53,7 +53,7 @@ header > h1{
   left: 215px;
 }
 
-#statistics {
+#statisticsBtn {
   z-index: 99;
   position: absolute;
   top: 800px;
@@ -149,7 +149,8 @@ header > h1{
 }
 */
 
-#myBtn {
+/*MODAL ABOUT-------------------------------------------------------------------------------------------------------*/
+#aboutBtn {
   z-index: 99;
   background: none;
   position: absolute;
@@ -160,9 +161,10 @@ header > h1{
   font-family: 'Ubuntu Mono', monospace;
   font-size: 20px;
   font-weight: bold;
+  transition: all 1;
 }
 
-.modal {
+.abModal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 99; /* Sit on top */
@@ -177,8 +179,7 @@ header > h1{
   
 }
 
-/* Modal Content */
-.modal-content {
+.aboutModalContent {
   background-color: whitesmoke(110, 170, 170);
   z-index: 99;
   margin: auto;
@@ -190,27 +191,82 @@ header > h1{
   border-radius: 15px;
 }
 
-/* The Close Button */
-.close {
+/*CLOSE nad HOVER function Button */
+.aboutClose {
   color: #292929;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.aboutClose:hover,
+.aboutClose:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
+#aboutBtn:hover{
+  cursor: pointer;
+  color: rgb(88, 141, 63);
+  transition: all 2s;
+}
+
+/*MODAL STATISTICS----------------------------------------------------------------------------------------------*/
+
+.statModalContent {
+  background-color: whitesmoke(110, 170, 170);
+  z-index: 99;
+  margin: auto;
+  padding: 10px;
+  padding: 20px;
+  border: 0.5px solid rgb(175, 175, 175); 
+  width: 80%;
+  font-family: 'Ubuntu Mono', monospace;
+  border-radius: 15px;
+}
+
+.statModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  
+}
+
+/* CLOSE Button*/
+.statClose {
+  color: #292929;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.statClose:hover,
+.statClose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .av{
   position: absolute;
   z-index: 99;
 }
 
+#statisticsDashboard{
+  border-radius: 15px;
+  border: 0.5px solid black;
+}
+
+/* Sidebar NETWORK lines----------------------------------------------------------------------------------------------------------------------*/
 #lines-content{
   position: absolute;
   z-index: 1;
@@ -223,13 +279,36 @@ header > h1{
   padding: 15px;
 }
 
-.cbn {
+.lin {
   font-weight: bold;
 }
 
 .lines > h3{
   font-weight: bold;
 }
+
+/* Sidebar network suburbs----------------------------------------------------------------------------------------------------------------------*/
+#suburb-content{
+  position: absolute;
+  z-index: 1;
+  color: whitesmoke;
+  background: #888888;
+  border: 2px solid white;
+  border-radius: 4px;
+  right: 20px;
+  top: 450px;
+  font-family: 'Ubuntu', monospace;
+  padding: 15px;
+}
+
+.sub {
+  font-weight: bold;
+}
+
+.sub > h3{
+  font-weight: bold;
+}
+
 /*
 .container{
   position: absolute;
@@ -238,16 +317,13 @@ header > h1{
   left: 200px;
 }
 */
+
 .badge:hover{
   cursor: pointer;
   background: rgb(88, 141, 63);
 }
 
-#myBtn:hover{
-  cursor: pointer;
-  color: rgb(88, 141, 63);
-}
-  
+/*MAP-----------------------------------------------------------------------------------------------------------------------------------------------*/
 #map {
     border-left: 1px solid #fff;
     position: absolute;
