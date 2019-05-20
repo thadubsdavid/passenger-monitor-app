@@ -30,8 +30,8 @@
         </header>
 
         <div class="visualization">
-            <input type="button" id="lines" value="LINES" class="badge"/>
-            <input type="button" id="network" value="NETWORK" class="badge"/>
+            <!--input type="button" id="lines" value="LINES" class="badge"/-->
+            <!--input type="button" id="network" value="NETWORK" class="badge"/>-->
         </div>
 
 
@@ -101,12 +101,14 @@
 
       <!-- SIDEBAR LINES ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
+      <button id="linesBtn" onclick="x()" class="badge">LINES</button>
+
       <div id='sidebarLine'>
 
         <div id='lines-content'>
 
             <div class='line'>
-              <h3>PT -&nbsp;Lines:</h3>
+              <h3>PT -&nbsp;Lines</h3>
             </div>
   
             <div class='line'>
@@ -114,35 +116,35 @@
               <span>&nbsp;Tram 1</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin2' class='lin' checked>
+              <input type='checkbox' id='lin2' class='lin'>
               <span>&nbsp;Tram 2</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin3' class='lin' checked>
+              <input type='checkbox' id='lin3' class='lin' >
               <span>&nbsp;Tram 3</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin4' class='lin' checked>
+              <input type='checkbox' id='lin4' class='lin' >
               <span>&nbsp;Tram 5</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin5' class='lin' checked>
+              <input type='checkbox' id='lin5' class='lin' >
               <span>&nbsp;Tram 6</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin6' class='lin' checked>
+              <input type='checkbox' id='lin6' class='lin' >
               <span>&nbsp;S1</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin7' class='lin' checked>
+              <input type='checkbox' id='lin7' class='lin' >
               <span>&nbsp;S2</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin8' class='lin' checked>
+              <input type='checkbox' id='lin8' class='lin' >
               <span>&nbsp;S5</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin9' class='lin' checked>
+              <input type='checkbox' id='lin9' class='lin' >
               <span>&nbsp;S7</span>
             </div>
             
@@ -153,50 +155,52 @@
 
         <!-- SIDEBAR SUBURBS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
+        <button id="suburbBtn" onclick="y()" class="badge">NETWORK</button>
+
         <div id='sidebarSuburb'>
 
           <div id='suburb-content'>
   
               <div class='suburb'>
-                <h3>Karlsruhe -&nbsp;Suburbs:</h3>
+                <h3>Karlsruhe -&nbsp;Suburbs</h3>
               </div>
     
               <div class='suburb'>
-                <input type='checkbox' id='sub1' class='sub' checked>
+                <input type='checkbox' id='sub1' class='sub' >
                 <span>&nbsp;Innenstadt West</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub2' class='sub' checked>
+                <input type='checkbox' id='sub2' class='sub' >
                 <span>&nbsp;Innenstadt Ost</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub3' class='sub' checked>
+                <input type='checkbox' id='sub3' class='sub' >
                 <span>&nbsp;Nordstadt</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub4' class='sub' checked>
+                <input type='checkbox' id='sub4' class='sub' >
                 <span>&nbsp;Weststadt</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub5' class='sub' checked>
+                <input type='checkbox' id='sub5' class='sub' >
                 <span>&nbsp;Oststadt</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub' class='sub' checked>
+                <input type='checkbox' id='sub' class='sub' >
                 <span>&nbsp;Südstadt</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub7' class='sub' checked>
+                <input type='checkbox' id='sub7' class='sub' >
                 <span>&nbsp;Nordweststadt</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub8' class='sub' checked>
+                <input type='checkbox' id='sub8' class='sub' >
                 <span>&nbsp;Südweststadt</span>
               </div>
               
-            </div>
-    
           </div>
+    
+        </div>
 
   </body>
 
