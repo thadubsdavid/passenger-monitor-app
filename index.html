@@ -11,16 +11,23 @@
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
 
-        <!--script src='scripts/d3.min.js'></script>-->
-        <!--script src='scripts/slider.js'></script>-->
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <!--script src='d3.slider.js'></script-->
 
         <!--script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://unpkg.com/d3-time-slider"></script>-->
 
         <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />-->
 
-        <link rel="stylesheet" href="slider.css">
-        <link rel="stylesheet" href="styles.css ">
+        <link rel="stylesheet" href="d3.slider.css">
+        <!--link rel="stylesheet" href="d3.slider.css"-->
+        <link rel="stylesheet" href="styles.css"/>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
 
     </head>
 
@@ -67,12 +74,14 @@
         <!-- MAP MAPBOX ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
         <div id='map' class='map'></div>
-        <script src="app.js"></script>
+       
+
+        <!--nav id="menu"></nav-->
 
 
         <!-- SLIDER  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
-        <div id = 'controls'>
+        <!--div id = 'controls'>
       
             <div id='slider-area-t'>
               <div id='slider-t'></div>
@@ -96,7 +105,7 @@
             <div class="slider"></div>
               <div class="col-sm-2"><p id="value-time"></p></div>
               <div class="col-sm-2"><p id="slider-time"></p></div>
-        </div>
+        </div>-->
 
 
       <!-- SIDEBAR LINES ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
@@ -112,11 +121,11 @@
             </div>
   
             <div class='line'>
-              <input type='checkbox' id='lin1' class='lin' checked>
+              <input type='checkbox' id='lin1' value = "1" class='lin'>
               <span>&nbsp;Tram 1</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin2' class='lin'>
+              <input type='checkbox' id='lin2' value="2" class='lin'>
               <span>&nbsp;Tram 2</span>
             </div>
             <div class='line'>
@@ -166,7 +175,7 @@
               </div>
     
               <div class='suburb'>
-                <input type='checkbox' id='sub1' class='sub' >
+                <input type='checkbox' id='sub1' value="1" class='sub' >
                 <span>&nbsp;Innenstadt West</span>
               </div>
               <div class='suburb'>
@@ -186,7 +195,7 @@
                 <span>&nbsp;Oststadt</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub' class='sub' >
+                <input type='checkbox' id='sub6' value="6" class='sub' checked>
                 <span>&nbsp;Südstadt</span>
               </div>
               <div class='suburb'>
@@ -201,7 +210,14 @@
           </div>
     
         </div>
+        <!--SLIDER------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <div id="slider3"></div>
 
+
+        <!--APP --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="jquery/jquery.min.js"></script>
+        <script src="app.js"></script>
   </body>
 
 
