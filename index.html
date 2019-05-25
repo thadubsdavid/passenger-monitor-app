@@ -8,7 +8,6 @@
 
         <title> Passenger Flow </title>
 
-        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
 
         <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -27,7 +26,7 @@
         <link rel="stylesheet" href="styles.css"/>
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
 
     </head>
 
@@ -191,11 +190,11 @@
                 <span>&nbsp;Weststadt</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub5' class='sub' >
+                <input type='checkbox' id='sub5' value="5" class='sub'>
                 <span>&nbsp;Oststadt</span>
               </div>
               <div class='suburb'>
-                <input type='checkbox' id='sub6' value="6" class='sub' checked>
+                <input type='checkbox' id='sub6' value="6" class='sub' >
                 <span>&nbsp;Südstadt</span>
               </div>
               <div class='suburb'>
@@ -214,7 +213,10 @@
         <div id="slider3"></div>
 
 
-        <!--APP --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--APP LIBRARIES--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="jquery/jquery.min.js"></script>
         <script src="app.js"></script>
