@@ -36,7 +36,7 @@ header > h1{
   border: 1px solid whitesmoke;
   border-radius: 100px;
   transition: all 1s;
-  padding: 15px;  
+  padding: 15px; 
 }
 
 .visualization{
@@ -199,6 +199,21 @@ header > h1{
   z-index: 99;
 }
 
+/*POP UP STATISTICS----------------------------------------------------------------------------------------------*/
+
+.containerLines {
+  position: fixed;
+  
+  background: #888888;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 10px; 
+  width: 25%;
+  height: 25%;
+  top: 15px;
+  left: 15px;
+  z-index: 99;
+}
 
 /* Sidebar NETWORK lines----------------------------------------------------------------------------------------------------------------------*/
 #sidebarLine{
