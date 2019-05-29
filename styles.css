@@ -201,9 +201,8 @@ header > h1{
 
 /*POP UP STATISTICS----------------------------------------------------------------------------------------------*/
 
-.containerLines {
+.containerLines1 {
   position: fixed;
-  
   background: #888888;
   color: whitesmoke;
   border: 1px solid whitesmoke;
@@ -215,6 +214,23 @@ header > h1{
   z-index: 99;
 }
 
+.containerLines2 {
+  position: fixed;
+  background: #888888;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 10px; 
+  width: 25%;
+  height: 25%;
+  top: 15px;
+  left: 15px;
+  z-index: 99;
+}
+/*
+[contentEditable=false]:empty:not(:focus):before{
+  content:attr(data-text)
+}
+*/
 /* Sidebar NETWORK lines----------------------------------------------------------------------------------------------------------------------*/
 #sidebarLine{
   position: absolute;
@@ -225,7 +241,7 @@ header > h1{
   border: 2px solid white;
   border-radius: 4px;
   right: 20px;
-  top: 200px;
+  top: 460px;
   font-family: 'Ubuntu', monospace;
   padding: 15px;
 }

@@ -85,8 +85,8 @@ $('#sub1').change(function() {
                           },
                         'layout': {},
                         'paint': {
-                                  'fill-color': '#588d3f',
-                                  'fill-opacity': 0.1
+                                  'fill-color': '#ff6633', //red
+                                  'fill-opacity': 0.2
                                   }
            });
      
@@ -180,7 +180,7 @@ $('#sub1').change(function() {
                         'layout': {},
                         'paint': {
                                   'fill-color': '#ff6633',
-                                  'fill-opacity': 0.1
+                                  'fill-opacity': 0.2
                                   }
            });
      
@@ -213,8 +213,8 @@ $('#sub1').change(function() {
       type: "fill",
       source: "subOst",
       paint: {
-            'fill-color': '#D6BB35',
-            'fill-opacity': 0.1
+            'fill-color': '#D6BB35', //yellow
+            'fill-opacity': 0.2
     }
   });
   }
@@ -247,8 +247,8 @@ $('#sub1').change(function() {
         type: "fill",
         source: "subSued",
         paint: {
-              'fill-color': '#588d3f',
-              'fill-opacity': 0.1
+              'fill-color': '#588d3f', //green
+              'fill-opacity': 0.2
       }
     });
       
@@ -282,8 +282,8 @@ $('#sub1').change(function() {
       type: "fill",
       source: "subNord",
       paint: {
-            'fill-color': '#A03901',
-            'fill-opacity': 0.1
+            'fill-color': '#588d3f', //green
+            'fill-opacity': 0.2
     }
   });
   }
@@ -316,8 +316,8 @@ $('#sub1').change(function() {
       type: "fill",
       source: "subNordWest",
       paint: {
-            'fill-color': '#337685',
-            'fill-opacity': 0.1
+            'fill-color': '#588d3f', //green
+            'fill-opacity': 0.2
     }
   
   });
@@ -350,8 +350,8 @@ $('#sub1').change(function() {
     type: "fill",
     source: "subWestFar",
     paint: {
-          'fill-color': '#28G000',
-          'fill-opacity': 0.1
+          'fill-color': '#D6BB35', //yellow
+          'fill-opacity': 0.2
   }
   });
   }
@@ -382,8 +382,8 @@ $('#sub1').change(function() {
     type: "fill",
     source: "subSuedWest",
     paint: {
-          'fill-color': '#28G000',
-          'fill-opacity': 0.1
+          'fill-color': '#ff6633', //red
+          'fill-opacity': 0.2
   }
   });
   }
