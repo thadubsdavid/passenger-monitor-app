@@ -9,6 +9,7 @@ $('#lin1').change(function() {
       addChart1();
       $('#statisticsLines1').show();
       $('#statisticsLines2').hide();
+      $('#h2').remove();
       
       
         
@@ -16,6 +17,7 @@ $('#lin1').change(function() {
       $('#statisticsLines1').remove();
       map.removeSource('Line1')
       map.removeLayer('Line1')
+      $('#h2').remove();
     }
            
   });
@@ -134,7 +136,7 @@ $('#lin1').change(function() {
   
       "paint": {
         "line-color": ['get', 'color'],
-        "line-width": 3
+        "line-width": 5
       }
   
       });
@@ -174,13 +176,14 @@ $('#lin1').change(function() {
       addChart2();
       $('#statisticsLines2').show();
       $('#statisticsLines1').hide();
-      
+      $('#h2').remove();
         
     }else{
       
       $('#statisticsLines2').remove();
       map.removeSource('Line2')
       map.removeLayer('Line2')
+      $('#h2').remove();
     }
            
   });
@@ -302,7 +305,7 @@ $('#lin1').change(function() {
   
       "paint": {
         "line-color": ['get', 'color'],
-        "line-width": 3
+        "line-width": 5
       }
   
       });
@@ -418,7 +421,7 @@ $('#lin1').change(function() {
   
       "paint": {
         "line-color": ['get', 'color'],
-        "line-width": 3
+        "line-width": 5
       }
   
       });

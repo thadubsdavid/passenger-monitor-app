@@ -200,9 +200,25 @@ header > h1{
 }
 
 /*POP UP STATISTICS----------------------------------------------------------------------------------------------*/
+.containerLines1 > h2 {
+  color: darkgrey;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  top: 45%;
+}
+
+.containerLines2 > h2 {
+  color: darkgrey;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  top: 45%;
+}
 
 .containerLines1 {
   position: fixed;
+  display: none;
   background: #888888;
   color: whitesmoke;
   border: 1px solid whitesmoke;
@@ -217,6 +233,7 @@ header > h1{
 .containerLines2 {
   position: fixed;
   background: #888888;
+  display: none;
   color: whitesmoke;
   border: 1px solid whitesmoke;
   border-radius: 10px; 
