@@ -14,6 +14,28 @@ var map = new mapboxgl.Map({
 });
 
 
+function z() {
+
+  var statBoard = document.getElementById("containerLines1")
+  
+  if(statBoard.style.display === "inline-block") {
+    console.log('TEST')
+    statBoard.style.display = "none";
+  } else {
+    statBoard.style.display = "inline-block";
+  }
+
+  var statBoard2 = document.getElementById("containerLines2")
+  
+  if(statBoard2.style.display === "inline-block") {
+    console.log('TEST')
+    statBoard2.style.display = "none";
+  } else {
+    statBoard2.style.display = "inline-block";
+  }
+
+}
+
 /*
 //Modal STATISTICS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var statModal = document.getElementById("statisticsModal");
@@ -45,27 +67,6 @@ window.onclick = function(event) {
 }
 */
 
-function z() {
-
-  var statBoard = document.getElementById("containerLines1")
-  
-  if(statBoard.style.display === "inline-block") {
-    console.log('TEST')
-    statBoard.style.display = "none";
-  } else {
-    statBoard.style.display = "inline-block";
-  }
-
-  var statBoard2 = document.getElementById("containerLines2")
-  
-  if(statBoard2.style.display === "inline-block") {
-    console.log('TEST')
-    statBoard2.style.display = "none";
-  } else {
-    statBoard2.style.display = "inline-block";
-  }
-
-}
   
 //REQUEST----------------------------------------------------------------------------------------------------------------------------------------------
 

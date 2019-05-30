@@ -2,6 +2,8 @@ var lineChart1 = document.getElementById('lineChart1').getContext('2d');
 
 var lineChart2 = document.getElementById('lineChart2').getContext('2d');
 
+var lineChartX = document.getElementById('lineChartX').getContext('2d');
+
 //Chart.default.global.defaultFontSize = 18,
 function addChart1 () {
     var chart = new Chart(lineChart1, {
@@ -103,31 +105,10 @@ function addChart2 () {
                     889,
                     194,
                     183,
-                    100,
-                    1000,
+                    200,
+                    300,
                     990,
-                    1231,
-                    435,
-                    485,
-                    242,
-                    56,
-                    889,
-                    194,
-                    183,
-                    3399,
-                    1583,
-                    1197,
-                    1990,
-                    2231,
-                    435,
-                    485,
-                    242,
-                    56,
-                    889,
-                    694,
-                    1083,
-                    1000,
-                    90
+                    500
                                    
                 ]
             }]
@@ -137,3 +118,53 @@ function addChart2 () {
         options: {}
     });
 }
+
+
+//Chart.default.global.defaultFontSize = 18,
+function addChartX () {
+    var chart = new Chart(lineChartX, {
+        // The type of chart we want to create
+        id: 'chartLineX',
+        type: 'doughnut',
+        // The data for our dataset
+        data: {
+            labels: [
+                'Badeniaplatz', 'Empty'
+            ],
+            datasets: [{
+                label: 'Besetzungsgrad Tram 1',
+                backgroundColor: [
+                    'rgb(0,26,4)',
+                    'rgb(255,165,0'
+                ],
+                borderColor: 'rgb(0,26,4)',
+                hoverBackgroundColor: 'red',
+                data: [
+                    70, 30                           
+                ]
+            }]
+        },
+    
+        // Configuration options go here
+        options: {
+            cutoutPercentage: 50,
+            rotation: 15,
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            },
+            legend: {
+                position: 'bottom',
+            },
+            elements: {
+                center: {
+                    text: 'Test',
+                    sidePadding: 15
+                }
+            }
+        },
+
+    });
+}
+
+

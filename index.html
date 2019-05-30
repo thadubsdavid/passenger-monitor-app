@@ -40,22 +40,32 @@
             <!--input type="button" id="network" value="NETWORK" class="badge"/>-->
         </div>
 
+        <!-- LIVE MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <button id="liveBtn" onclick="w()" class="badge">LIVE!</button>
+
+        <div id="liveModal" class="liveModal">
+
+          <div class="liveModalContent">
+            <span class="liveClose">&times;</span>
+            <p> Live connection to served trains</p>
+            
+            <canvas id="lineChartX"></canvas>
+          </div>
+
+        </div>
+
 
         <!-- STATISTICS MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-
-        <button id="statisticsBtn" onclick="z()" class="badge">STATISTICS</button>
-
-        <div id="statisticsModal" class="statModal">
-
+        <!--div id="statisticsModal" class="statModal">
           <div class="statModalContent">
             <span class="statClose">&times;</span>
             <p> Here some charts by Tableau </p>
             <img src="dashboardExperiment.png" alt="statisticsDashboard" width="1100" height="500"> 
           </div>
-
-        </div>
+        </div-->
 
         <!-- STATISTICS PopUp ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <button id="statisticsBtn" onclick="z()" class="badge">STATISTICS</button>
         <div id="statisticsLines1">
           <div id="containerLines1" class="containerLines1"style="opacity: 0.9">
 
@@ -151,27 +161,27 @@
               <span>&nbsp;Tram 3</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin4' class='lin' >
+              <input type='checkbox' id='lin5' class='lin' >
               <span>&nbsp;Tram 5</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin5' class='lin' >
+              <input type='checkbox' id='lin6' class='lin' >
               <span>&nbsp;Tram 6</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin6' class='lin' >
+              <input type='checkbox' id='linS1' class='lin' >
               <span>&nbsp;S1</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin7' class='lin' >
+              <input type='checkbox' id='linS2' class='lin' >
               <span>&nbsp;S2</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin8' class='lin' >
+              <input type='checkbox' id='linS5' class='lin' >
               <span>&nbsp;S5</span>
             </div>
             <div class='line'>
-              <input type='checkbox' id='lin9' class='lin' >
+              <input type='checkbox' id='linS7' class='lin' >
               <span>&nbsp;S7</span>
             </div>
             
@@ -245,6 +255,7 @@
         <script src="lines.js"></script>
         <script src="suburb.js"></script>
         <script src="aboutModal.js"></script>
+        <script src="liveModal.js"></script>
         <script src="sidebar.js"></script>
         <script src="statistics.js"></script>
   </body>
