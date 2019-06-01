@@ -1,0 +1,56 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Name": "Punkt 1", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.4015806, 48.9914966, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 2", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3982118, 48.9907644, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 3", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3963287, 48.9929403, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 4", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3965862, 48.9942778, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 5", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3935178, 48.994489, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 6", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3893013, 48.9947987, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 7", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3857823, 48.9950381, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 8", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3835936, 48.9952211, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 9", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3817912, 48.9938273, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 10", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3796776, 48.9922644, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 11", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3773387, 48.9930247, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 12", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3750427, 48.9942778, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 13", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3736372, 48.9957864, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 14", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3723498, 48.997518, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 15", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3707619, 48.9988836, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 16", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3698178, 48.9997423, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 17", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3726073, 49.0011078, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 18", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3709979, 49.0030364, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 19", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3726502, 49.0037402, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 20", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3744097, 49.0047115, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 21", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.375901, 49.0058235, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 22", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3778751, 49.0058657, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 23", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3809436, 49.0057531, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Punkt 24", "Description": "" }, "geometry": { "type": "Point", "coordinates": [ 8.3839691, 49.0055842, 0.0 ] } }
+,
+{ "type": "Feature", "properties": { "Name": "Polygon 25", "Description": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 8.4015806, 48.9914966, 0.0 ], [ 8.4041179, 48.992347, 0.0 ], [ 8.4058345, 48.9928046, 0.0 ], [ 8.4051264, 48.9940506, 0.0 ], [ 8.4045578, 48.9949447, 0.0 ], [ 8.4043217, 48.9954937, 0.0 ], [ 8.4043325, 48.9963314, 0.0 ], [ 8.4042895, 48.9969509, 0.0 ], [ 8.4041255, 48.9975385, 0.0 ], [ 8.4037393, 48.9983128, 0.0 ], [ 8.403353, 48.9991997, 0.0 ], [ 8.4028595, 49.0005089, 0.0 ], [ 8.4029453, 49.0012972, 0.0 ], [ 8.4030741, 49.0021981, 0.0 ], [ 8.4033316, 49.0038733, 0.0 ], [ 8.4035084, 49.0055006, 0.0 ], [ 8.4000966, 49.0054724, 0.0 ], [ 8.397908, 49.0054584, 0.0 ], [ 8.3946786, 49.0054443, 0.0 ], [ 8.3912883, 49.0054021, 0.0 ], [ 8.3893356, 49.0054021, 0.0 ], [ 8.3869538, 49.0054302, 0.0 ], [ 8.3839691, 49.0055842, 0.0 ], [ 8.3809436, 49.0057531, 0.0 ], [ 8.3778751, 49.0058657, 0.0 ], [ 8.375901, 49.0058235, 0.0 ], [ 8.3744097, 49.0047115, 0.0 ], [ 8.3726502, 49.0037402, 0.0 ], [ 8.3709979, 49.0030364, 0.0 ], [ 8.3726073, 49.0011078, 0.0 ], [ 8.3698048, 48.9998298, 0.0 ], [ 8.3707619, 48.9988836, 0.0 ], [ 8.3723498, 48.997518, 0.0 ], [ 8.3736372, 48.9957864, 0.0 ], [ 8.3750427, 48.9942778, 0.0 ], [ 8.3773387, 48.9930247, 0.0 ], [ 8.3796776, 48.9922644, 0.0 ], [ 8.3817912, 48.9938273, 0.0 ], [ 8.3835936, 48.9952211, 0.0 ], [ 8.3857823, 48.9950381, 0.0 ], [ 8.3893013, 48.9947987, 0.0 ], [ 8.3935178, 48.994489, 0.0 ], [ 8.3965862, 48.9942778, 0.0 ], [ 8.3963287, 48.9929403, 0.0 ], [ 8.3982118, 48.9907644, 0.0 ], [ 8.4015806, 48.9914966, 0.0 ] ] ] } }
+
+]
+}

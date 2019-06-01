@@ -206,7 +206,7 @@ $('#sub1').change(function() {
   console.log('TEST')
     map.addSource("subOst", {
       type: "geojson",
-      data: "polygonOst.json"
+      data: "geodata/polygonOst.json"
   });
     map.addLayer({
       id: "subOst",
@@ -240,7 +240,7 @@ $('#sub1').change(function() {
       console.log('TEST')
       map.addSource("subSued", {
         type: "geojson",
-        data: "polygonSued.json"
+        data: "geodata/polygonSued.json"
     });
       map.addLayer({
         id: "subSued",
@@ -275,7 +275,7 @@ $('#sub1').change(function() {
     console.log('TESTNord')
     map.addSource("subNord", {
       type: "geojson",
-      data: "polygonNord.json"
+      data: "geodata/polygonNord.json"
   });
     map.addLayer({
       id: "subNord",
@@ -309,7 +309,7 @@ $('#sub1').change(function() {
     console.log('TESTNordWest')
     map.addSource("subNordWest", {
       type: "geojson",
-      data: "polygonNordWest.json"
+      data: "geodata/polygonNordWest.json"
   });
     map.addLayer({
       id: "subNordWest",
@@ -343,7 +343,7 @@ $('#sub1').change(function() {
   
     map.addSource("subWestFar", {
       type: "geojson",
-      data: "polygonWestFar.json"
+      data: "geodata/polygonWestFar.json"
   });
     map.addLayer({
     id: "subWestFar",
@@ -375,7 +375,7 @@ $('#sub1').change(function() {
   
     map.addSource("subSuedWest", {
       type: "geojson",
-      data: "polygonSuedWest.json"
+      data: "geodata/polygonSuedWest.json"
   });
     map.addLayer({
     id: "subSuedWest",

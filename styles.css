@@ -414,6 +414,8 @@ header > h1{
   top: 460px;
   font-family: 'Ubuntu', monospace;
   padding: 15px;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+
 }
 
 .lin {
@@ -441,6 +443,8 @@ header > h1{
   top: 200px;
   font-family: 'Ubuntu', monospace;
   padding: 15px;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+
 }
 
 .sub {
@@ -472,7 +476,7 @@ header > h1{
   position: absolute;
   width: 25%;
   top: 790px;
-  left: 1125px;
+  left: 1105px;
   padding: 10px;
   
   }
