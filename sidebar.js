@@ -3,15 +3,23 @@
 
 function x() {
 
-    var sidebarLin = document.getElementById("sidebarLine")
+  var sidebarLin = document.getElementById("sidebarLine")
   
     if(sidebarLin.style.display === "inline-block") {
       sidebarLin.style.display = "none";
     } else {
       sidebarLin.style.display = "inline-block";
     }
-  }
   
+
+  var legendLin = document.getElementsById('legendLin')
+
+    if(legendLin.style.display === 'inline-block') {
+      legendLin.style.display = 'none';
+    } else {
+      legendLin.style.display = 'inline-block';
+    }
+}
     
   
   

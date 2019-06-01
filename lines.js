@@ -1,5 +1,3 @@
-
-
 // Layer on/off----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 $('#lin1').change(function() {
@@ -9,15 +7,17 @@ $('#lin1').change(function() {
       addChart1();
       $('#statisticsLines1').show();
       $('#statisticsLines2').hide();
-      $('#h2').remove();
-      
-      
+      $('#statisticsLines3').hide();
+      $('#statisticsLines5').hide();
+      $('#statisticsLinesS1').hide();
+      $('#statisticsLinesS2').hide();
+    
         
     }else{
       $('#statisticsLines1').remove();
       map.removeSource('Line1')
       map.removeLayer('Line1')
-      $('#h2').remove();
+      
     }
            
   });
@@ -176,14 +176,20 @@ $('#lin1').change(function() {
       addChart2();
       $('#statisticsLines2').show();
       $('#statisticsLines1').hide();
-      $('#h2').remove();
+      $('#statisticsLines3').hide();
+      $('#statisticsLines5').hide();
+      $('#statisticsLinesS1').hide();
+      $('#statisticsLinesS2').hide();
+
+
+
+
         
     }else{
       
       $('#statisticsLines2').remove();
       map.removeSource('Line2')
       map.removeLayer('Line2')
-      $('#h2').remove();
     }
            
   });
@@ -204,7 +210,7 @@ $('#lin1').change(function() {
 
               "type": "Feature",
               "properties": {
-                'color': '#00bf00' //black
+                'color': '#41ee41' //green
                 },
   
                 //Elements of Array that apply to middle force
@@ -213,7 +219,7 @@ $('#lin1').change(function() {
                 "type": "LineString",
                 "coordinates": [
                   [8.3498621380341849,49.027822323935609],[8.3493990385389054,49.028110901555181],[8.349146073853225,49.028272916977322],[8.348886857791479,49.028430602049518],[8.3486215583386212,49.02858385196928],[8.348350353361079,49.028732564290166],[8.3480734225219031,49.028876640688914],[8.3477909472808101,49.029015986376073],[8.3466623362971983,49.02964286338463],[8.3519018257688469,49.026477697713297],[8.3516638907961731,49.026623173703783],[8.351431748160449,49.026772643488279],[8.351205554168537,49.026926007484839],[8.3507655279013413,49.027229791288228],[8.3503176791046503,49.027528593055884]//[8.4043642198957365,48.995642936936441],
-                  //Siemensallee - Europaplatz
+                  //Siemensallee 
                   
                 ]
               }
@@ -224,7 +230,7 @@ $('#lin1').change(function() {
   
               "type": "Feature",
               "properties": {
-                'color': '#cbcb00' //yellow
+                'color': '#cca100' //yellow
                 },
   
                 //Elements of Array that apply to middle force
@@ -243,7 +249,7 @@ $('#lin1').change(function() {
   
               'type': 'Feature',
               'properties': {
-                'color': '#cb0000' //red
+                'color': '#ce7f2f' //orange
               },
             'geometry': {
               'type': 'LineString',
@@ -260,7 +266,7 @@ $('#lin1').change(function() {
   
               'type': 'Feature',
               'properties': {
-                'color': '#cbcb00' //yellow
+                'color': '#cc6600' //orange
               },
             'geometry': {
               'type': 'LineString',
@@ -276,7 +282,7 @@ $('#lin1').change(function() {
   
                 'type': 'Feature',
                 'properties': {
-                  'color': '#00bf00' //green
+                  'color': '#41ee41' //green
                 },
               'geometry': {
                 'type': 'LineString',
@@ -314,11 +320,19 @@ $('#lin1').change(function() {
   // ON OFF TRAM 3-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   $('#lin3').change(function() {
     if($(this).is(":checked")) {
-        
       addLayerLine3();
+      addChart3();
+      console.log('TEST tram3')
+      $('#statisticsLines1').hide();
+      $('#statisticsLines2').hide();
+      $('#statisticsLines3').show();
+      $('#statisticsLines5').hide();
+      $('#statisticsLinesS1').hide();
+      $('#statisitcsLinesS2').hide();
+
         
     }else{
-    
+      $('#statisticsLine3').remove();
       map.removeSource('Line3')
       map.removeLayer('Line3')
     }
@@ -455,11 +469,18 @@ $('#lin1').change(function() {
   // ON OFF TRAM 5-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   $('#lin5').change(function() {
     if($(this).is(":checked")) {
-        
       addLayerLine5();
+      addChart5();
+      $('#statisticsLines1').hide();
+      $('#statisticsLines2').hide();
+      $('#statisticsLines3').hide();
+      $('#statisticsLines5').show();
+      $('#statisticsLineS1').hide();
+      $('#statisticsLineS2').hide();
+      
         
     }else{
-    
+      $('#statisticsLines5').remove();
       map.removeSource('Line5')
       map.removeLayer('Line5')
     }
@@ -594,13 +615,21 @@ $('#lin1').change(function() {
   // ON OFF S1/S11-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   $('#linS1').change(function() {
     if($(this).is(":checked")) {
-        
       addLayerLineS1();
+      addChartS1();
+      $('#statisticsLines1').hide();
+      $('#statisticsLines2').hide();
+      $('#statisticsLines3').hide();
+      $('#statisticsLines5').hide();
+      $('#statisticsLinesS1').show();
+      $('#statisticsLinesS2').hide();
+      
         
     }else{
-    
+      $('#statisticsLinesS1').remove();
       map.removeSource('LineS1')
       map.removeLayer('LineS1')
+      
     }
            
   });
@@ -622,6 +651,7 @@ $('#lin1').change(function() {
             //Collection-1 of data driven polylines
   
               "type": "Feature",
+              "id": "test",
               "properties": {
                 'color': '#b71515'  //red
                 },
@@ -724,13 +754,21 @@ $('#lin1').change(function() {
   // ON OFF S2-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   $('#linS2').change(function() {
     if($(this).is(":checked")) {
-        
+      addChartS2();
       addLayerLineS2();
+      $('#h2').remove();
+      $('#statisticsLines1').hide();
+      $('#statisticsLines2').hide();
+      $('#statisticsLines3').hide();
+      $('#statisticsLines5').hide();
+      $('#statisticsLinesS1').hide();
+      $('#statisticsLinesS2').show();
         
     }else{
-    
+      $('#statisticsLinesS2').remove();
       map.removeSource('LineS2')
       map.removeLayer('LineS2')
+      $('#h2').remove();
     }
            
   });

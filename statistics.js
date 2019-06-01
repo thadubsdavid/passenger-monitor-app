@@ -1,10 +1,31 @@
+// Function to create random dummy data-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+for (var dummy =[],i=0;i<40;++i) dummy[i]=i;
+
+function shuffle(array) {
+
+  var cache, random, top = array.length;
+
+  if(top) while(--top) {
+    random = Math.floor(Math.random() * (top + 1));
+    cache = array[random];
+    array[random] = array[top];
+    array[top] = cache;
+  }
+  return array;
+}
+dummy = shuffle(dummy);
+console.log(dummy);
+
+// Line Charts-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var lineChart1 = document.getElementById('lineChart1').getContext('2d');
-
 var lineChart2 = document.getElementById('lineChart2').getContext('2d');
-
+var lineChart3 = document.getElementById('lineChart3').getContext('2d');
+var lineChart5 = document.getElementById('lineChart5').getContext('2d');
+var lineChartS1 = document.getElementById('lineChartS1').getContext('2d');
+var lineChartS2 = document.getElementById('lineChartS2').getContext('2d');
 var lineChartX = document.getElementById('lineChartX').getContext('2d');
 
-//Chart.default.global.defaultFontSize = 18,
+
 function addChart1 () {
     var chart = new Chart(lineChart1, {
         // The type of chart we want to create
@@ -20,33 +41,8 @@ function addChart1 () {
                 label: 'Besetzungsgrad Tram 1',
                 backgroundColor: 'rgb(240,128,128)',
                 borderColor: 'rgb(0,26,4)',
-                data: [
-                    1023,
-                    367,
-                    1070,
-                    1074,
-                    383,
-                    184,
-                    798,
-                    242,
-                    648,
-                    331,
-                    197,
-                    1101,
-                    3399,
-                    1583,
-                    1197,
-                    990,
-                    1231,
-                    435,
-                    485,
-                    242,
-                    56,
-                    889,
-                    194,
-                    183,
-                    1                
-                ]
+                data:  dummy           
+                
             }]
         },
     
@@ -70,47 +66,8 @@ function addChart2 () {
                 label: 'Besetzungsgrad Tram 2',
                 backgroundColor: 'rgb(70,130,180)',
                 borderColor: 'rgb(0,26,4)',
-                data: [
-                    123,
-                    667,
-                    670,
-                    874,
-                    383,
-                    1284,
-                    1798,
-                    2242,
-                    1848,
-                    2231,
-                    1297,
-                    1101,
-                    1399,
-                    1583,
-                    1197,
-                    1990,
-                    2231,
-                    435,
-                    485,
-                    242,
-                    526,
-                    889,
-                    694,
-                    1083,
-                    1000,
-                    990,
-                    1231,
-                    435,
-                    485,
-                    242,
-                    56,
-                    889,
-                    194,
-                    183,
-                    200,
-                    300,
-                    990,
-                    500
-                                   
-                ]
+                data: dummy   
+                
             }]
         },
     
@@ -120,6 +77,111 @@ function addChart2 () {
 }
 
 
+function addChart3 () {
+    var chart = new Chart(lineChart3, {
+        // The type of chart we want to create
+        id: 'chartLine3',
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: [
+                'Neureut Heide',	'Heidehof',	'Duale Hochschule',	'Lilienthalstr',	'Synagoge', 'Kunstakademie',	'Mühlburger Tor',	'Europaplatz',	'Karlstor', 'Mathystr',	'Kolpingplatz', 'Ebertstr', 'Hbf Vorplatz',	'Poststr',	'Tivoli',
+            ],
+            datasets: [{
+                label: 'Besetzungsgrad Tram 3',
+                backgroundColor: 'rgb(70,130,180)',
+                borderColor: 'rgb(0,26,4)',
+                data: dummy                   
+                                   
+    
+            }]
+        },
+    
+        // Configuration options go here
+        options: {}
+    });
+}
+
+function addChart5 () {
+    var chart = new Chart(lineChart5, {
+        // The type of chart we want to create
+        id: 'chartLine5',
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: [
+                'Rheinhafen',	'Lameyplaz',	'Entenfang',	'Mühlburger Feld',	'Kühler Krug', 'Hübschstr',	'Weinbrennerplatz',	'Lessingstr',	'Otto-Sachs-Str', 'Mathystr',	'Konzerthaus', 'Volkswohnung', 'Rüppurer Tor',	'Kronenplatz',	'Durlacher Tor', 'Karl-Wilhelm-Platz', 'Hauptfriedhof', 'Dunantstr', 'Forststr', 'Rintheim'
+            ],
+            datasets: [{
+                label: 'Besetzungsgrad Tram 5',
+                backgroundColor: 'rgb(70,130,180)',
+                borderColor: 'rgb(0,26,4)',
+                data: dummy
+
+
+            }]
+        },
+    
+        // Configuration options go here
+        options: {}
+    });
+}
+
+function addChartS1() {
+    var chart = new Chart(lineChartS1, {
+        // The type of chart we want to create
+        id: 'chartLineS1',
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: [
+                 'Kirchfeld',	'Adolf-Ehrmann-Bad',	'Bärenweg',	'Welschneureuter Str',	'Kurt-Schumacher Str', 'August-Bebel Str',	'Knielinger Allee',	'Stadt. Klinikum',	'Yorckstr', 'Mühlburger Tor',	'Europaplatz', 'Herrenstr', 'Marktplatz',	'Kronenplatz',	'Rüppurer Tor', 'Werderstr',	'Tivoli',	'Poststr',	'Hbf Vorplatz',	'Albtalbahnhof', 'Dammerstock',	'Schloss Rüppurr',	'Ostendorfplatz',	'Tulpenstr', 'Battstr',	'Ettlingen'
+            ],
+            datasets: [{
+                label: 'Besetzungsgrad S1',
+                backgroundColor: 'rgb(70,130,180)',
+                borderColor: 'rgb(0,26,4)',
+                data: dummy
+                    
+                                   
+            }]
+        },
+    
+        // Configuration options go here
+        options: {}
+    });
+}
+
+function addChartS2 () {
+    var chart = new Chart(lineChartS2, {
+        // The type of chart we want to create
+        id: 'chartLineS2',
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: [
+                'Hammäcker',	'Dornröschenweg',	'Karl-Delisle-Str',	'Thomas-Mann-Str',	'Rheinhafenstr', 'Eckenerstr',	'Entenfang',	'Philippstr',	'Händelstr', 'Yorckstr',	'Mühlburger Tor', 'Europaplatz', 'Herrenstr',	'Marktplatz',	'Kronenplatz', 'Durlacher Tor',	'Karl-Wilhelm-Platz',	'Hauptfriedhof',	'Hirtenweg',	'Sinsheimer Str', 'Hagsfeld Süd',	'Hagsfeld Bf',	'Geroldsäcker',	'Jenaer Str', 'Reitschulschlag'
+            ],
+            datasets: [{
+                label: 'Besetzungsgrad S2',
+                backgroundColor: 'rgb(70,130,180)',
+                borderColor: 'rgb(0,26,4)',
+                data: 
+                    dummy
+                                   
+                
+            }]
+        },
+    
+        // Configuration options go here
+        options: {}
+    });
+}
+// LIVE CHART ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Chart.default.global.defaultFontSize = 18,
 function addChartX () {
     var chart = new Chart(lineChartX, {
@@ -147,6 +209,7 @@ function addChartX () {
     
         // Configuration options go here
         options: {
+        
             cutoutPercentage: 50,
             rotation: 15,
             animation: {
