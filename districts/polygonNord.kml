@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>polygonNord</name>
+    <Style id="icon-1899-A52714-nodesc-normal">
+      <IconStyle>
+        <color>ff1427a5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-A52714-nodesc-highlight">
+      <IconStyle>
+        <color>ff1427a5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-A52714-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-A52714-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-A52714-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-A52714-1200-76-nodesc-normal">
+      <LineStyle>
+        <color>ff1427a5</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4c1427a5</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-A52714-1200-76-nodesc-highlight">
+      <LineStyle>
+        <color>ff1427a5</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4c1427a5</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-A52714-1200-76-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-A52714-1200-76-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-A52714-1200-76-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Punkt 1</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.3830071,49.0313262,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 2</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.386451,49.0310589,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 3</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.3867622,49.0318468,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 4</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.3889616,49.032719,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 5</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.3900023,49.0331833,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 6</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.39203,49.0339992,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 7</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.393414,49.0345197,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 8</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.3951414,49.0334787,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 9</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.3969673,49.0326179,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 10</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.3992632,49.030592,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 11</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.4001913,49.0307186,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 12</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.4035065,49.0313728,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 13</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.4056308,49.0324139,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 14</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.4063926,49.0324174,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 15</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.4060519,49.0294032,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punkt 16</name>
+      <styleUrl>#icon-1899-A52714-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          8.4057488,49.0267088,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Polygon 17</name>
+      <styleUrl>#poly-A52714-1200-76-nodesc</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <tessellate>1</tessellate>
+            <coordinates>
+              8.4057488,49.0267088,0
+              8.4060519,49.0294032,0
+              8.4063926,49.0324174,0
+              8.4056308,49.0324139,0
+              8.4035065,49.0313728,0
+              8.4001913,49.0307186,0
+              8.3992632,49.030592,0
+              8.3969673,49.0326179,0
+              8.3951414,49.0334787,0
+              8.393414,49.0345197,0
+              8.39203,49.0339992,0
+              8.3900023,49.0331833,0
+              8.3867622,49.0318468,0
+              8.386451,49.0310589,0
+              8.3830071,49.0313262,0
+              8.3803891,49.0310683,0
+              8.3790642,49.02459,0
+              8.3822077,49.021621,0
+              8.3803946,49.0206642,0
+              8.375749,49.0208049,0
+              8.3756202,49.0189896,0
+              8.3754915,49.0177794,0
+              8.3753842,49.0162595,0
+              8.375065,49.0152891,0
+              8.37812,49.0152293,0
+              8.3793398,49.0151589,0
+              8.3838674,49.014983,0
+              8.385922,49.014793,0
+              8.3880008,49.0146422,0
+              8.3884642,49.0167491,0
+              8.389623,49.0188318,0
+              8.3914417,49.02055,0
+              8.3931635,49.0217165,0
+              8.3951109,49.0226734,0
+              8.3967791,49.0233835,0
+              8.399354,49.0239745,0
+              8.4018216,49.024284,0
+              8.405448,49.0241855,0
+              8.4057488,49.0267088,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

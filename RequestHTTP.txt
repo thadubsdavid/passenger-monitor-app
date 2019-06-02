@@ -1,0 +1,21 @@
+
+// REQUEST TILES 'http://a.tiles.mapbox.com/v4/mapbox.mapbox-streets-v7/14/4823/6160.mvt?access_token=pk.eyJ1IjoidGhhZHVic2RhdmlkIiwiYSI6ImNqdWk4ZHJ5cjBmMHY0NG43MTJpNjJ3d3IifQ.ZJ-oVOrNt0CHXDfVSDQrLw'
+/*
+const Http = new XMLHttpRequest();
+const url = 'http://a.tiles.mapbox.com/v4/mapbox.mapbox-streets-v7/14/4823/6160.mvt?access_token=pk.eyJ1IjoidGhhZHVic2RhdmlkIiwiYSI6ImNqdWk4ZHJ5cjBmMHY0NG43MTJpNjJ3d3IifQ.ZJ-oVOrNt0CHXDfVSDQrLw';
+Http.open("GET", url);
+Http.send();
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+} 
+
+//Polyline-------------------------------------------------------------------
+
+map.on('load', function() {
+
+  //Add layer for rail_station_label
+    map.addLayer({
+      "id": "transit_stop_label",
+      ""
+    })
+*/
