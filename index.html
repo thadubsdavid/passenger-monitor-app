@@ -61,9 +61,10 @@
           </div>
         </div-->
 
-        <!-- STATISTICS PopUp ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <!-- STATISTICS PopUp LINES------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
         <button id="statisticsBtn" onclick="z()" class="badge">STATISTICS</button>
-        
+      
+      
         <!--Diagrams of lines in KVV Network -->
         <div id="statisticsLines1">
           <div id="containerLines1" class="containerLines1"style="opacity: 0.9">
@@ -102,14 +103,70 @@
 
         <div id="statisticsLinesS2">
           <div id="containerLinesS2" class="containerLinesS2" style="opacity: 0.9">
-            <h2 id="h2" >STATISTICS BOARD</h2> <!--Pacehoder sits on top  of any statisticslines object -> remove method in line class-->
+            <!--h2 id="h2" >STATISTICS BOARD</h2--> <!--Pacehoder sits on top  of any statisticslines object -> remove method in line class-->
             <canvas id="lineChartS2"></canvas>
           </div>
         </div>
+      
+        <!-- STATISTICS PopUp SUBS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <!--button id="statisticsBtn" onclick="z()" class="badge">STATISTICS</button>-->
+      
+        <!--Bar charts of suburbs in KVV Network -->
+        <div id="statisticsSub1"> <!--Innen West-->
+          <div id="containerSub1" class="containerSub1"style="opacity: 0.9">
+            <!--h3 id='h3' >STATISTICS BOARD</h3>-->
+            <canvas id="barChart1"></canvas>
+          </div>
+        </div>
 
+        <div id="statisticsSub2" > <!--Innen Ost-->
+          <div id="containerSub2"  class="containerSub2" style="opacity: 0.9" >
+            <!--h2 id='h2' >STATISTICS BOARD</h2-->
+            <canvas id="barChart2"></canvas>  
+          </div>        
+        </div>
 
+        <div id="statisticsSub3"> <!--West Far-->
+          <div id="containerSub3" class="containerSub3" style="opacity: 0.9">
+            <!--h2 id='h2' >STATISTICS BOARD</h2>-->
+            <canvas id="barChart3"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub4"> <!--Sued West-->
+          <div id="containerSub4" class="containerSub4" style="opacity: 0.9">
+            <!--h2 id="h2" >STATISTICS BOARD</h2>-->
+            <canvas id="barChart4"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub5"> <!-- Nord West-->
+          <div id="containerSub5" class="containerSub5" style="opacity: 0.9">
+            <!--h2 id="h2" >STATISTICS BOARD</h2-->
+            <canvas id="barChart5"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub6"> <!-- Sued -->
+          <div id="containerSub6" class="containerSub6" style="opacity: 0.9">
+            <!--h2 id="h2" >STATISTICS BOARD</h2-->
+            <canvas id="barChart6"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub7"> <!-- Nord -->
+          <div id="containerSub7" class="containerSub7" style="opacity: 0.9">
+            <!--h2 id="h2" >STATISTICS BOARD</h2-->
+            <canvas id="barChart7"></canvas>
+          </div>
+        </div>
         
-        
+        <div id="statisticsSub8"> <!-- Ost -->
+          <div id="containerSub8" class="containerSub8" style="opacity: 0.9">
+            <h3 id="h3" >STATISTICS BOARD</h3> <!--Pacehoder sits on top  of any statisticslines object -> remove method in line class-->
+            <canvas id="barChart8"></canvas>
+          </div>
+        </div>
 
         <!-- ABOUT MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
         
@@ -130,38 +187,7 @@
         <div id='map' class='map'></div>
        
 
-        <!--nav id="menu"></nav-->
-
-
-        <!-- SLIDER  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-
-        <!--div id = 'controls'>
-      
-            <div id='slider-area-t'>
-              <div id='slider-t'></div>
-            </div>
-      
-            <div id='slider-area-b'>
-              <div id='slider-b'></div>
-            </div>
-            
-          </div>
-
-          
-        <div class="slider">
-            <div id="day" class="slider">DAY</div>
-            <div id="hour" class="slider">HOUR</div>
-        </div>
-
-
-        <div class="container">
-            <h2>TIME</h2>
-            <div class="slider"></div>
-              <div class="col-sm-2"><p id="value-time"></p></div>
-              <div class="col-sm-2"><p id="slider-time"></p></div>
-        </div>-->
-
-
+     
       <!-- SIDEBAR LINES ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
       <button id="linesBtn" onclick="x()" class="badge">LINES</button>
@@ -304,9 +330,16 @@
         <script src="aboutModal.js"></script>
         <script src="liveModal.js"></script>
         <script src="sidebar.js"></script>
-        <script src="statistics.js"></script>
+        <script src="statisticsLines.js"></script>
+        <script src="statisticsBoard.js"></script>
+        <script src="statisticsSuburb.js"></script>
+        <script src="statisticsLive.js"></script>
 
-
+      </div>
+    </body>
+  
+  
+  </html>
 
 
 
@@ -445,8 +478,3 @@
 
   </div>
 </div>-->
-</div>
-  </body>
-
-
-</html>

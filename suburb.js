@@ -5,15 +5,47 @@ $('#sub1').change(function() {
     if($(this).is(":checked")) {
         
       addLayerSub1();
+      addChartSub1();
+
+      $('#statisticsSub1').show();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
+
+
       
     }else{
+      $('#statisticsSub1').remove();
+
     
       //map.removeSource('subStadtWest')
       map.removeLayer('subWS')
+      map.removeSource('subInnenWest')
     }
            
   });
   // Polygon Suburb Innenstadt West--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  function addLayerSub1 () {
+    console.log('TEST')
+      map.addSource("subInnenWest", {
+        type: "geojson",
+        data: "geodata/polygonInnenWest.json"
+    });
+      map.addLayer({
+        id: "subWS",
+        type: "fill",
+        source: "subInnenWest",
+        paint: {
+              'fill-color': '#ff6633', //red
+              'fill-opacity': 0.2
+      }
+    });
+    }
+  /*
   function addLayerSub1 () {
     console.log('hereSub')
   
@@ -91,16 +123,28 @@ $('#sub1').change(function() {
            });
      
           }
-  
+  */
   // Layer Suburb On/Off----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   $('#sub2').change(function() {
     if($(this).is(":checked")) {
         
       addLayerSub2();
+      addChartSub2();
+
+      $('#statisticsSub2').show();
+      $('#statisticsSub1').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
+
       
     }else{
-    
+
+      $('statisticsSub2').remove();    
       //map.removeSource('subStadtWest')
       map.removeLayer('subOstStadt')
     }
@@ -191,8 +235,20 @@ $('#sub1').change(function() {
     if($(this).is(":checked")) {
         
       addLayerSub5();
+      addChartSub5();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').show();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
+
       
     }else{
+      $('statisticsSub5').remove();
       
       map.removeSource('subOst')
       map.removeLayer('subOst')
@@ -206,7 +262,7 @@ $('#sub1').change(function() {
   console.log('TEST')
     map.addSource("subOst", {
       type: "geojson",
-      data: "polygonOst.json"
+      data: "geodata/polygonOst.json"
   });
     map.addLayer({
       id: "subOst",
@@ -225,8 +281,20 @@ $('#sub1').change(function() {
     if($(this).is(":checked")) {
         
       addLayerSub6();
+      addChartSub6();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').show();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
+
       
     }else{
+      $('#statisticsSub6').remove();
       
       map.removeSource('subSued')
       map.removeLayer('subSued')
@@ -240,7 +308,7 @@ $('#sub1').change(function() {
       console.log('TEST')
       map.addSource("subSued", {
         type: "geojson",
-        data: "polygonSued.json"
+        data: "geodata/polygonSued.json"
     });
       map.addLayer({
         id: "subSued",
@@ -259,8 +327,20 @@ $('#sub1').change(function() {
     if($(this).is(":checked")) {
         
       addLayerSub3();
+      addChartSub3();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').show();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
+
       
     }else{
+      $('statisticsSub3').remove();
       
       map.removeSource('subNord')
       map.removeLayer('subNord')
@@ -275,7 +355,7 @@ $('#sub1').change(function() {
     console.log('TESTNord')
     map.addSource("subNord", {
       type: "geojson",
-      data: "polygonNord.json"
+      data: "geodata/polygonNord.json"
   });
     map.addLayer({
       id: "subNord",
@@ -293,8 +373,21 @@ $('#sub1').change(function() {
     if($(this).is(':checked')) {
   
       addLayerSub7();
+      addChartSub7();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').show();
+      $('#statisticsSub8').hide();
+
+      
   
     } else {
+      $('statisticsSub7').remove();
       
       map.removeSource("subNordWest")
       map.removeLayer("subNordWest")
@@ -309,7 +402,7 @@ $('#sub1').change(function() {
     console.log('TESTNordWest')
     map.addSource("subNordWest", {
       type: "geojson",
-      data: "polygonNordWest.json"
+      data: "geodata/polygonNordWest.json"
   });
     map.addLayer({
       id: "subNordWest",
@@ -328,8 +421,20 @@ $('#sub1').change(function() {
     if ($(this).is(':checked')) {
       
       addLayerSub4();
+      addChartSub4();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').show();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
+
   
     } else {
+      $('statisticsSub4').remove();
   
       map.removeSource('subWestFar')
       map.removeLayer('subWestFar')
@@ -343,7 +448,7 @@ $('#sub1').change(function() {
   
     map.addSource("subWestFar", {
       type: "geojson",
-      data: "polygonWestFar.json"
+      data: "geodata/polygonWestFar.json"
   });
     map.addLayer({
     id: "subWestFar",
@@ -361,8 +466,22 @@ $('#sub1').change(function() {
     if ($(this).is(':checked')) {
       
       addLayerSub8();
-  
+      addChartSub8();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').show();
+
+      $('#h3').remove();
+
+
     } else {
+      $('statisticsSub8').remove();
   
       map.removeSource('subSuedWest')
       map.removeLayer('subSuedWest')
@@ -375,7 +494,7 @@ $('#sub1').change(function() {
   
     map.addSource("subSuedWest", {
       type: "geojson",
-      data: "polygonSuedWest.json"
+      data: "geodata/polygonSuedWest.json"
   });
     map.addLayer({
     id: "subSuedWest",
@@ -387,3 +506,10 @@ $('#sub1').change(function() {
   }
   });
   }
+  
+
+
+
+
+
+

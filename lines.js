@@ -5,12 +5,22 @@ $('#lin1').change(function() {
         
       addLayerLine1();
       addChart1();
+
       $('#statisticsLines1').show();
       $('#statisticsLines2').hide();
       $('#statisticsLines3').hide();
       $('#statisticsLines5').hide();
       $('#statisticsLinesS1').hide();
       $('#statisticsLinesS2').hide();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
     
         
     }else{
@@ -181,9 +191,14 @@ $('#lin1').change(function() {
       $('#statisticsLinesS1').hide();
       $('#statisticsLinesS2').hide();
 
-
-
-
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
         
     }else{
       
@@ -329,6 +344,15 @@ $('#lin1').change(function() {
       $('#statisticsLines5').hide();
       $('#statisticsLinesS1').hide();
       $('#statisitcsLinesS2').hide();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
 
         
     }else{
@@ -477,6 +501,15 @@ $('#lin1').change(function() {
       $('#statisticsLines5').show();
       $('#statisticsLineS1').hide();
       $('#statisticsLineS2').hide();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
       
         
     }else{
@@ -623,6 +656,15 @@ $('#lin1').change(function() {
       $('#statisticsLines5').hide();
       $('#statisticsLinesS1').show();
       $('#statisticsLinesS2').hide();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
       
         
     }else{
@@ -763,6 +805,15 @@ $('#lin1').change(function() {
       $('#statisticsLines5').hide();
       $('#statisticsLinesS1').hide();
       $('#statisticsLinesS2').show();
+
+      $('#statisticsSub1').hide();
+      $('#statisticsSub2').hide();
+      $('#statisticsSub3').hide();
+      $('#statisticsSub4').hide();
+      $('#statisticsSub5').hide();
+      $('#statisticsSub6').hide();
+      $('#statisticsSub7').hide();
+      $('#statisticsSub8').hide();
         
     }else{
       $('#statisticsLinesS2').remove();

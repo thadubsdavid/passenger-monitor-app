@@ -14,64 +14,6 @@ var map = new mapboxgl.Map({
 });
 
 
-function z() {
-
-  var statBoard = document.getElementById("containerLines1")
-  
-  if(statBoard.style.display === "inline-block") {
-    console.log('TEST')
-    statBoard.style.display = "none";
-  } else {
-    statBoard.style.display = "inline-block";
-  }
-
-  var statBoard2 = document.getElementById("containerLines2")
-  
-  if(statBoard2.style.display === "inline-block") {
-    console.log('TEST')
-    statBoard2.style.display = "none";
-  } else {
-    statBoard2.style.display = "inline-block";
-  }
-
-  var statBoard3 = document.getElementById("containerLines3")
-  
-  if(statBoard3.style.display === "inline-block") {
-    console.log('TEST')
-    statBoard3.style.display = "none";
-  } else {
-    statBoard3.style.display = "inline-block";
-  }
-
-  //Number by the end of variable orients on tram line
-  var statBoard5 = document.getElementById("containerLines5")
-  
-  if(statBoard5.style.display === "inline-block") {
-    console.log('TEST')
-    statBoard5.style.display = "none";
-  } else {
-    statBoard5.style.display = "inline-block";
-  }
-
-  var statBoardS1 = document.getElementById("containerLinesS1")
-  
-  if(statBoardS1.style.display === "inline-block") {
-    console.log('TEST')
-    statBoardS1.style.display = "none";
-  } else {
-    statBoardS1.style.display = "inline-block";
-  }
-
-  var statBoardS2 = document.getElementById("containerLinesS2")
-  
-  if(statBoardS2.style.display === "inline-block") {
-    console.log('TEST')
-    statBoardS2.style.display = "none";
-  } else {
-    statBoardS2.style.display = "inline-block";
-  }
-
-}
 
 /*
 //Modal STATISTICS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
