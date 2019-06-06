@@ -1,3 +1,5 @@
+
+
 // Initial Variables-------------------------------------------------------------------------------------------------------------------------------------
 var barChartSub1 = document.getElementById('barChart1').getContext('2d');
 var barChartSub2 = document.getElementById('barChart2').getContext('2d');
@@ -17,19 +19,34 @@ function addChartSub1 () {
 
         data: {
             labels: [
-                'TEST', 'TEST1', 'TEST2'
+                'Herrenstr', 'Europaplatz'
             ],
             datasets: [{
-                label: 'TEST',
-                backgroundColor: 'rgb(70,130,180)',
+                label: 'Entry P/h',
+                backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
-                data: [
-                    5, 6, 10
-                ]
-            }]
+                //fillcolor: 'blue',
+                data: dummyEntry
+            },{
+                label: 'Exit P/h',
+                backgroundColor: 'rgb(52, 220, 110)', //green
+                borderColor: 'rgb(70,130,180)',
+                //fillcolor: 'green',
+                data: dummyExit
+            }
+        ]
         },
 
-        options:{}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1000
+                    }
+                }]
+            }
+        }
     })
 }
 
@@ -40,19 +57,34 @@ function addChartSub2 () {
 
         data: {
             labels: [
-                'TESTsub2', 'TESTsub2', 'TEST2'
+                'Marktplatz', 'Kronenplatz', 'Durlacher Tor'
             ],
             datasets: [{
-                label: 'TESTsub2',
-                backgroundColor: 'rgb(70,130,180)',
+                label: 'Entry P/h',
+                backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
-                data: [
-                    5, 6, 10
-                ]
-            }]
-        },
-
-        options:{}
+                //fillcolor: 'blue',
+                data: dummyEntry
+            },{
+                label: 'Exit P/h',
+                backgroundColor: 'rgb(52, 220, 110)', //green
+                borderColor: 'rgb(70,130,180)',
+                //fillcolor: 'green',
+                data: dummyExit
+            }
+        ]
+        }, 
+            options:{
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 1000
+                        }
+                    }]
+                }
+            }
+        
     })
 }
 
@@ -63,19 +95,35 @@ function addChartSub3 () {
 
         data: {
             labels: [
-                'TEST1', 'TESTsub', 'TEST'
+                'Haendelstr', 'Yorkstr', 'Klinikum/Moltkestr', 'Muehlburger Tor', 'Kunstakad./Hochschule', 'Schillerstr', 'Sophienstr', 'Weinbrennerplatz', 'Huebschstr' //9x
             ],
             datasets: [{
-                label: 'TESTsub3',
-                backgroundColor: 'rgb(70,130,180)',
+                label: 'Entry P/h',
+                backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
-                data: [
-                    5, 6, 10
-                ]
-            }]
+                //fillcolor: 'blue',
+                data: dummyEntry
+            },{
+                label: 'Exit P/h',
+                backgroundColor: 'rgb(52, 220, 110)', //green
+                borderColor: 'rgb(70,130,180)',
+                //fillcolor: 'green',
+                data: dummyExit
+            }
+        ]
+            
         },
 
-        options:{}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1000
+                    }
+                }]
+            }
+        }
     })
 }
 
@@ -86,19 +134,34 @@ function addChartSub4 () {
 
         data: {
             labels: [
-                'TESTsub2', 'TESTsub2', 'TEST2'
+                'Weinbrennerplatz', 'Landesbausparkasse', 'Europahalle','Welfenstr', 'Barbarossaplatz', 'Ebertstr','Hbf Vorplatz', 'Poststr', 'Kolpingplatz','Mathystr', 'Karlstor', 'Otto-Sachs-Str', 'Arbeitsagentur', 'Lessingstr', 'ZKM' //15
             ],
             datasets: [{
-                label: 'TESTsub4',
-                backgroundColor: 'rgb(70,130,180)',
+                label: 'Entry P/h',
+                backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
-                data: [
-                    5, 6, 10
-                ]
-            }]
+                //fillcolor: 'blue',
+                data: dummyEntry
+            },{
+                label: 'Exit P/h',
+                backgroundColor: 'rgb(52, 220, 110)', //green
+                borderColor: 'rgb(70,130,180)',
+                //fillcolor: 'green',
+                data: dummyExit
+            }
+        ]
         },
 
-        options:{}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1000
+                    }
+                }]
+            }
+        }
     })
 }
 
@@ -109,19 +172,34 @@ function addChartSub5 () {
 
         data: {
             labels: [
-                'TESTsub2', 'TESTsub2', 'TEST2'
+                'Neureuter Str.', 'Feiarbendweg', 'Hertzstr', 'Kussmaulstr', 'Klinikum/Moltkestr', 'Knielinger Allee', 'August-Bebel-Str', 'Kurt-Schumacher-Str', 'Haus Bethlehem' //9x
             ],
             datasets: [{
-                label: 'TESTsub5',
-                backgroundColor: 'rgb(70,130,180)',
+                label: 'Entry P/h',
+                backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
-                data: [
-                    5, 6, 10
-                ]
-            }]
+                //fillcolor: 'blue',
+                data: dummyEntry
+            },{
+                label: 'Exit P/h',
+                backgroundColor: 'rgb(52, 220, 110)', //green
+                borderColor: 'rgb(70,130,180)',
+                //fillcolor: 'green',
+                data: dummyExit
+            }
+        ]
         },
 
-        options:{}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1000
+                    }
+                }]
+            }
+        }
     })
 }
 
@@ -132,19 +210,34 @@ function addChartSub6 () {
 
         data: {
             labels: [
-                'TESTsub2', 'TESTsub2', 'TEST2'
+                'Tivoli', 'Werderstr', 'Rueppurer Tor','Philip-Reis-Str.', 'Staatstheater', 'Ostendstr', 'Wolfartsweier Str' //7x
             ],
             datasets: [{
-                label: 'TESTsub6',
-                backgroundColor: 'rgb(70,130,180)',
+                label: 'Entry P/h',
+                backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
-                data: [
-                    5, 6, 10
-                ]
-            }]
+                //fillcolor: 'blue',
+                data: dummyEntry
+            },{
+                label: 'Exit P/h',
+                backgroundColor: 'rgb(52, 220, 110)', //green
+                borderColor: 'rgb(70,130,180)',
+                //fillcolor: 'green',
+                data: dummyExit
+            }
+        ]
         },
 
-        options:{}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1000
+                    }
+                }]
+            }
+        }
     })
 }
 
@@ -155,19 +248,34 @@ function addChartSub7 () {
 
         data: {
             labels: [
-                'TESTsub2', 'TESTsub2', 'TEST2'
+                'Heidehof', 'Duale Hochschule', 'Lilienthalstr.', 'Synagoge'
             ],
             datasets: [{
-                label: 'TESTsub7',
-                backgroundColor: 'rgb(70,130,180)',
+                label: 'Entry P/h',
+                backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
-                data: [
-                    5, 6, 10
-                ]
-            }]
+                //fillcolor: 'blue',
+                data: dummyEntry
+            },{
+                label: 'Exit P/h',
+                backgroundColor: 'rgb(52, 220, 110)', //green
+                borderColor: 'rgb(70,130,180)',
+                //fillcolor: 'green',
+                data: dummyExit
+            }
+        ]
         },
 
-        options:{}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1000
+                    }
+                }]
+            }
+        }
     })
 }
 
@@ -178,19 +286,34 @@ function addChartSub8 () {
 
         data: {
             labels: [
-                'TESTsub2', 'TESTsub2', 'TEST2'
+                'Weinweg', 'Tullastr.', 'Schloss Gottesaue', 'Gottesauer Platz', 'Karl-Wilhelm-Platz', 'Hauptfriedhof', 'Rintheimer Str', 'Essensweinstr', 'Dunantstr', 'Hirtenweg/Tech.Park' //10x
             ],
             datasets: [{
-                label: 'TESTsub8',
-                backgroundColor: 'rgb(70,130,180)',
+                label: 'Entry P/h',
+                backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
-                data: [
-                    5, 6, 10
-                ]
-            }]
+                //fillcolor: 'blue',
+                data: dummyEntry
+            },{
+                label: 'Exit P/h',
+                backgroundColor: 'rgb(52, 220, 110)', //green
+                borderColor: 'rgb(70,130,180)',
+                //fillcolor: 'green',
+                data: dummyExit
+            }
+        ]
         },
 
-        options:{}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1000
+                    }
+                }]
+            }
+        }
     })
 }
 

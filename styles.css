@@ -11,6 +11,12 @@ body {
     font-family: 'Ubuntu Mono', monospace;
   }
   
+
+
+.bottomBar {
+  background-color: #b71515;
+}
+/*
 header{
     text-align: center;
     font-family: 'Ubuntu Mono', monospace;
@@ -29,7 +35,7 @@ header > h1{
     border: 1px solid black;
     border-radius: 4px;
 }
-
+*/
 .badge{
   background: #888888;
   color: whitesmoke;
@@ -44,7 +50,7 @@ header > h1{
   font-family: 'Ubuntu Mono', monospace;
   width: 30px;
 }
-
+/*
 #linesBtn{
   z-index: 99;
   position: absolute;
@@ -80,7 +86,7 @@ header > h1{
   left: 100px;
   box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
 }
-
+*/
 .addition{
   z-index: 99;
   background: none;
@@ -103,20 +109,21 @@ header > h1{
 }
 
 /*MODAL ABOUT-------------------------------------------------------------------------------------------------------*/
+/*
 #aboutBtn {
   z-index: 99;
   background: none;
   position: absolute;
   font-size: 15px;
   border: none;
-  top: 20px;
+  top: 200px;
   left: 1370px;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 20px;
   font-weight: bold;
   transition: all 1;
 }
-
+*/
 .abModal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -494,8 +501,8 @@ header > h1{
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   position: absolute;
   width: 25%;
-  top: 790px;
-  left: 1125px;
+  bottom: 5%;
+  right: 0px;
   padding: 10px;
   
   }
@@ -561,6 +568,16 @@ header > h1{
   text-align: center;
   border-radius: 4px;
 }
+
+.navbar-default {
+  margin-left:auto; 
+  margin-right:auto;
+  width:100%;
+  height: 60px;
+  top: 870px;
+}
+
+
 
 /*MAP-----------------------------------------------------------------------------------------------------------------------------------------------*/
 #map {

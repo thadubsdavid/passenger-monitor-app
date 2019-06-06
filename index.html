@@ -27,13 +27,17 @@
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
     </head>
 
   <body>
-        <header>
+        <!--header>
             <h1>Passenger Flow Karlsruhe</h1>
-        </header>
+        </header-->
 
         <div class="visualization">
             <!--input type="button" id="lines" value="LINES" class="badge"/-->
@@ -41,15 +45,7 @@
         </div>
 
         <!-- LIVE MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-        <button id="liveBtn" onclick="w()" class="badge">LIVE!</button>
-
-        <div id="liveModal" class="liveModal">
-          <div class="liveModalContent">
-            <span class="liveClose">&times;</span>
-            <p> Live connection to served trains</p>
-            <canvas id="lineChartX"></canvas>
-          </div>
-        </div>
+        
 
 
         <!-- STATISTICS MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
@@ -62,7 +58,7 @@
         </div-->
 
         <!-- STATISTICS PopUp LINES------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-        <button id="statisticsBtn" onclick="z()" class="badge">STATISTICS</button>
+        
       
       
         <!--Diagrams of lines in KVV Network -->
@@ -170,7 +166,7 @@
 
         <!-- ABOUT MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
         
-        <button id="aboutBtn">ABOUT</button>
+        
         
         <div id="aboutModal" class="abModal">
 
@@ -190,7 +186,6 @@
      
       <!-- SIDEBAR LINES ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
-      <button id="linesBtn" onclick="x()" class="badge">LINES</button>
 
       <div id='sidebarLine'>
 
@@ -241,10 +236,42 @@
   
         </div>
 
+        <!-- bottom bar ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    
+        
+
+        <div id="liveModal" class="liveModal">
+          <div class="liveModalContent">
+            <span class="liveClose">&times;</span>
+            <p> Live connection to served trains</p>
+            <canvas id="lineChartX"></canvas>
+          </div>
+        </div>
+
+      
+        <nav class="navbar navbar-default">
+      
+            <div class="container-fluid">
+              
+            <a class="navbar-brand">Passenger Flow Karlsruhe</a>
+              
+             <ul class="navbar-nav">
+              
+              <button id="liveBtn" onclick="w()" class="btn btn-danger navbar-btn">LIVE!</button>
+              <button id="suburbBtn" onclick="y()" class="btn btn-dark navbar-btn">NETWORK</button>
+              <button id="linesBtn" onclick="x()" class="btn btn-dark navbar-btn">LINES</button>
+              <button id="statisticsBtn" onclick="z()" class="btn btn-dark navbar-btn">STATISTICS</button>
+              <button id="aboutBtn" class="btn btn-dark  navbar-btn">ABOUT</button>
+            </ul>
+            </div>
+            
+          </nav>
+          
+          
+      
 
         <!-- SIDEBAR SUBURBS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
-        <button id="suburbBtn" onclick="y()" class="badge">NETWORK</button>
 
         <div id='sidebarSuburb'>
 
@@ -335,6 +362,7 @@
         <script src="scripts/statisticsBoard.js"></script>
         <script src="scripts/statisticsSuburb.js"></script>
         <script src="scripts/statisticsLive.js"></script>
+        <script src="scripts/dummyData.js"></script>
 
       </div>
     </body>
