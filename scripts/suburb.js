@@ -6,6 +6,7 @@ $('#sub1').change(function() {
         
       addLayerSub1();
       addChartSub1();
+      
 
       $('#statisticsSub1').show();
       $('#statisticsSub2').hide();

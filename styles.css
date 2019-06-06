@@ -541,6 +541,16 @@ header > h1{
 
 }
 
+.marker2 {
+  background-image: url('images/railstationIconGreen.png');
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
 .mapboxgl-popup {
   max-width: 200px;
 }
@@ -555,11 +565,22 @@ header > h1{
   
 }
 
+
+
+
 .mapboxgl-popup-content >h4 {
   background-color: whitesmoke;
   color: #000;
   text-align: center;
   border-radius: 4px;
+}
+
+.mapboxgl-popup-content >p8 {
+  background-color: #888888;
+  color: lightgrey;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 8px;
 }
 
 /*MAP-----------------------------------------------------------------------------------------------------------------------------------------------*/
