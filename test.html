@@ -43,4 +43,92 @@
                 
                 
               </nav>
-</body>
+              <script>
+ 
+                
+                
+
+                function getRandomInt(min, max) {
+                  min = Math.ceil(min);
+                  max = Math.floor(max);
+                  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+                            }
+              
+              function getRandomArbitrary(min, max) {
+                  return Math.random() * (max - min) + min;
+                              }
+
+                              console.log(getRandomInt(10,20))
+
+                      /**
+                       * Returns a random integer between min (inclusive) and max (inclusive).
+                       * The value is no lower than min (or the next integer greater than min
+                       * if min isn't an integer) and no greater than max (or the next integer
+                       * lower than max if max isn't an integer).
+                       * Using Math.round() will give you a non-uniform distribution!
+                       */
+                      /*
+              function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+                              }
+                              
+
+                            function getRandomizer(top, bottom) {
+                              return function() {
+                                return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+                                }
+                            }
+                              console.log(getRandomInt(10,20))
+*/
+
+
+/**
+                              var rollDie = getRandomizer( 1, 6 );
+
+                              var results = ""
+                              for ( var i = 0; i<1000; i++ ) {
+                                  results += rollDie() + " ";    //make a string filled with 1000 random numbers in the range 1-6.
+                              }
+                              console.log(rollDie)
+*/
+
+
+                              var a = 0.05;
+                              var b = 10; //play with these values to your liking
+                              var y;
+                              var x = 5;
+                              var data;
+                                
+
+                                function randomNumber(minimum, maximum){
+                                    return  a * x^2 + b * x * Math.random();
+                                  }
+                                  data = randomNumber(50,150)
+                                  console.log(data);
+
+                              //var z = randomNumber(50,150);
+                              //console.log(z)
+                            
+                            
+
+                            var nums = Array.from({ length: 40 }, () => a * x^2 + b * x * Math.random());
+                            console.log(nums)
+
+$(function () {
+    function randomNumber(minimum, maximum){
+        return Math.round( Math.random() * (maximum - minimum) + minimum);
+    }
+    var d1 = [];
+    for (var x = 0; x < 100; x++) {
+        function randomNumber(minimum, maximum){
+            return  a * x^2 + b * x * Math.random();
+        }
+        y = randomNumber(x,100);
+        d1.push([x, y]);
+        $('textarea').append(y + "\t");
+    }
+    $.plot($("#placeholder"), [d1]);
+});
+//-------------------------------------------------------------------------------------------------------------------------------------------

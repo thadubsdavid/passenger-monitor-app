@@ -1,5 +1,8 @@
 
 
+
+
+
 //initial Variables-------------------------------------------------------------------------------------------------------------------------------------
 var lineChart1 = document.getElementById('lineChart1').getContext('2d');
 var lineChart2 = document.getElementById('lineChart2').getContext('2d');
@@ -14,6 +17,9 @@ var lineChartS2 = document.getElementById('lineChartS2').getContext('2d');
 
 
 function addChart1 () {
+
+    
+
     var chart = new Chart(lineChart1, {
         // The type of chart we want to create
         id: 'chartLine1',
@@ -28,13 +34,22 @@ function addChart1 () {
                 label: 'Besetzungsgrad Tram 1',
                 backgroundColor: 'rgb(240,128,128)',
                 borderColor: 'rgb(0,26,4)',
-                data:  dummy           
+                data:  trend   
                 
             }]
         },
     
         // Configuration options go here
-        options: {}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 200
+                    }
+                }]
+            }
+        }
     });
 }
 
@@ -53,13 +68,22 @@ function addChart2 () {
                 label: 'Besetzungsgrad Tram 2',
                 backgroundColor: 'rgb(70,130,180)',
                 borderColor: 'rgb(0,26,4)',
-                data: dummy   
+                data: dummy
                 
             }]
         },
     
         // Configuration options go here
-        options: {}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 200
+                    }
+                }]
+            }
+        }
     });
 }
 
