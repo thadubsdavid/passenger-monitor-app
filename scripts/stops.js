@@ -1,5 +1,5 @@
 
-
+/*
 var geojson = {
     "type": "FeatureCollection",
     "features": [
@@ -1263,7 +1263,7 @@ var geojson = {
       }
     ]
   };
-  
+  */
   for (var i = 0; i < geojson.features.length; i++) {
     //var itemTitle = geojson.features[i].title;
    // var itemUrl = geojson.features[i].condition;

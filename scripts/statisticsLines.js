@@ -1,8 +1,3 @@
-
-
-
-
-
 //initial Variables-------------------------------------------------------------------------------------------------------------------------------------
 var lineChart1 = document.getElementById('lineChart1').getContext('2d');
 var lineChart2 = document.getElementById('lineChart2').getContext('2d');

@@ -8,6 +8,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
         <!--script href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -18,7 +19,6 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     </head>
@@ -31,104 +31,164 @@
                 <a class="navbar-brand">Passenger Flow Karlsruhe</a>
                   
                  <ul class="navbar-nav">
-                  <button id="liveBtn" onclick="w()" class="btn btn-dark navbar-btn">LIVE!</button>
-                  <button id="suburbBtn" onclick="y()" class="btn btn-dark navbar-btn">NETWORK</button>
-                  <button id="linesBtn" onclick="x()" class="btn btn-dark navbar-btn">LINES</button>
+                    <button id="suburbBtn" onclick="y()" class="btn btn-dark navbar-btn">NETWORK</button>
+                    <button id="linesBtn" onclick="x()" class="btn btn-dark navbar-btn">LINES</button>
+                    <button id="statisticsBtn" onclick="z()" class="btn btn-dark navbar-btn">STATISTICS</button>
+                    <button id="aboutBtn" class="btn btn-dark  navbar-btn">ABOUT</button>
+                    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal1">LIVE!!</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">Player 2</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">Player 3</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal4">Player 4</button>
                  
                 </ul>
-                <div class="float-right">
-                        <button id="statisticsBtn" onclick="z()" class="btn btn-dark navbar-btn">STATISTICS</button>
-                        
-                </div>
+                
                 
                 
               </nav>
+    
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title 1</h4>
+        </div>
+        <div class="modal-body">
+          <p id="test">TEST</p>
+          <canvas id="lineChartX"></canvas>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-prev">Prev</button>
+          <button type="button" class="btn btn-default btn-next">Next</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Button trigger modal--> 
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title 2</h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/Board20_4.PNG" id="imageModal">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-prev">Prev</button>
+          <button type="button" class="btn btn-default btn-next">Next</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Button trigger modal -->
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title 3</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-prev">Prev</button>
+          <button type="button" class="btn btn-default btn-next">Next</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Button trigger modal -->
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title 4</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-prev">Prev</button>
+          <button type="button" class="btn btn-default btn-next">Next</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
               <script>
+  $("div[id^='myModal']").each(function(){
+  
+  var currentModal = $(this);
+  
+  //click next
+  currentModal.find('.btn-next').click(function(){
+    currentModal.modal('hide');
+    currentModal.closest("div[id^='myModal']").nextAll("div[id^='myModal']").first().modal('show'); 
+  });
+  
+  //click prev
+  currentModal.find('.btn-prev').click(function(){
+    currentModal.modal('hide');
+    currentModal.closest("div[id^='myModal']").prevAll("div[id^='myModal']").first().modal('show'); 
+  });
+
+});
+var chartData = {
+  labels: ["S", "M", "T", "W", "T", "F", "S"],
+  datasets: [{
+    data: [589, 445, 483, 503, 689, 692, 634],
+  },
+  {
+    data: [639, 465, 493, 478, 589, 632, 674],
+  }]
+};
+var chLine = document.getElementById("chLine");
+if (chLine) {
+  new Chart(chLine, {
+  type: 'line',
+  data: chartData,
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: false
+        }
+      }]
+    },
+    legend: {
+      display: false
+    }
+  }
+  });
+}
+              
+              
+              </script>
  
                 
                 
-
-                function getRandomInt(min, max) {
-                  min = Math.ceil(min);
-                  max = Math.floor(max);
-                  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-                            }
-              
-              function getRandomArbitrary(min, max) {
-                  return Math.random() * (max - min) + min;
-                              }
-
-                              console.log(getRandomInt(10,20))
-
-                      /**
-                       * Returns a random integer between min (inclusive) and max (inclusive).
-                       * The value is no lower than min (or the next integer greater than min
-                       * if min isn't an integer) and no greater than max (or the next integer
-                       * lower than max if max isn't an integer).
-                       * Using Math.round() will give you a non-uniform distribution!
-                       */
-                      /*
-              function getRandomInt(min, max) {
-                min = Math.ceil(min);
-                max = Math.floor(max);
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-                              }
-                              
-
-                            function getRandomizer(top, bottom) {
-                              return function() {
-                                return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
-                                }
-                            }
-                              console.log(getRandomInt(10,20))
-*/
-
-
-/**
-                              var rollDie = getRandomizer( 1, 6 );
-
-                              var results = ""
-                              for ( var i = 0; i<1000; i++ ) {
-                                  results += rollDie() + " ";    //make a string filled with 1000 random numbers in the range 1-6.
-                              }
-                              console.log(rollDie)
-*/
-
-
-                              var a = 0.05;
-                              var b = 10; //play with these values to your liking
-                              var y;
-                              var x = 5;
-                              var data;
-                                
-
-                                function randomNumber(minimum, maximum){
-                                    return  a * x^2 + b * x * Math.random();
-                                  }
-                                  data = randomNumber(50,150)
-                                  console.log(data);
-
-                              //var z = randomNumber(50,150);
-                              //console.log(z)
-                            
-                            
-
-                            var nums = Array.from({ length: 40 }, () => a * x^2 + b * x * Math.random());
-                            console.log(nums)
-
-$(function () {
-    function randomNumber(minimum, maximum){
-        return Math.round( Math.random() * (maximum - minimum) + minimum);
-    }
-    var d1 = [];
-    for (var x = 0; x < 100; x++) {
-        function randomNumber(minimum, maximum){
-            return  a * x^2 + b * x * Math.random();
-        }
-        y = randomNumber(x,100);
-        d1.push([x, y]);
-        $('textarea').append(y + "\t");
-    }
-    $.plot($("#placeholder"), [d1]);
-});
 //-------------------------------------------------------------------------------------------------------------------------------------------
