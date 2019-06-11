@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    
+    
+    <head>
+        <meta charset="utf-8">
+        
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="dist/bootstrap-slider.css" rel="stylesheet">
+        <script src="dist/bootstrap-slider.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+        <script href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <!--link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="dist/progressbar.js"></script>
+    </head>
+    <style>
+    
+    .circle {
+  width: 200px;
+  margin: 6px 6px 20px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.circle canvas {
+  vertical-align: top;
+  width: 200px !important;
+}
+
+.circle strong {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  color: black;
+}
+
+.circle strong i {
+  font-style: normal;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+
+.circle span {
+  display: block;
+  color: #aaa;
+  margin-top: 12px;
+}
+    
+    </style>
+
+
+    <body>
+            <h1>UTC Timestamps</h1>
+            <h2 class="livestamp"></h2>
+            <h4 class="livestamp" data-format="MMMM Do YYYY, h:mm:ss a"></h4>
+            <p class="livestamp"></p>
+            
+
+            <button type="button" class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#myModal1">LIVE!</button>
+
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">LIVE <p class="livestamp"></p>
+                      </h4>
+                    </div>
+                    <div class="modal-body">
+                      <!--canvas id="lineChartX"></canvas>-->
+                      <!--div id="container"></div>-->
+                      <div class="container">
+                            <h2>Progress Bar</h2>
+                            <div class="row text-center">
+                                
+                                
+                                <div class="col-sm-4">
+                                    <div class="progressbar">
+                                    <div class="second circle" data-percent="77">
+                                      <strong></strong>
+                                      <span>animation <br> progress</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    <div class="progressbar">
+                                    <div class="second circle" data-percent="55">
+                                      <strong></strong>
+                                      <span>animation <br> progress</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    <div class="progressbar">
+                                    <div class="second circle" data-percent="100">
+                                      <strong></strong>
+                                      <span>animation <br> progress</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                            
+                        
+                            
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default btn-prev">Prev</button>
+                      <button type="button" class="btn btn-default btn-next">Next</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+<script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+    
+    </body>
+
+    <script>
+
+var activateTimestamps = function() {
+                var updateLiveTimestamp = function($timestamp, format) {
+                  var timestamp = moment().utc(19,6,12,1,16).format(format);
+                  $timestamp.html(timestamp);
+                };
+              
+                $('.livestamp').each(function(index, element) {
+                  var $element = $(element);
+                  var defaultFormat = 'DD.MM.YYYY HH:mm:ss';
+                  var timestampFormat = $element.data('format') || defaultFormat;
+                  
+                  var callback = function() {
+                    updateLiveTimestamp($element, timestampFormat);
+                  };
+                  setInterval(callback, 1000);
+                });
+              };
+              
+              activateTimestamps();
+    
+    $(document).ready(function ($) {
+    function animateElements() {
+        $('.progressbar').each(function () {
+            var elementPos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            var percent = $(this).find('.circle').attr('data-percent');
+            var animate = $(this).data('animate');
+            if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
+                $(this).data('animate', true);
+                $(this).find('.circle').circleProgress({
+                    // startAngle: -Math.PI / 2,
+                    value: percent / 100,
+                    size : 400,
+                    thickness: 15,
+                    fill: {
+                        color: '#663399'
+                    }
+                }).on('circle-animation-progress', function (event, progress, stepValue) {
+                    $(this).find('strong').text((stepValue*100).toFixed(0) + "%");
+                }).stop();
+            }
+        });
+    }
+
+    animateElements();
+    $(window).scroll(animateElements);
+});
+
+    </script>
+
+</html>

@@ -224,47 +224,6 @@ header > h1{
 
 /*MODAL LIVE----------------------------------------------------------------------------------------------*/
 
-.liveModalContent {
-  background-color: whitesmoke(110, 170, 170);
-  z-index: 99;
-  margin: auto;
-  padding: 10px;
-  padding: 20px;
-  border: 0.5px solid rgb(175, 175, 175); 
-  width: 80%;
-  font-family: 'Ubuntu Mono', monospace;
-  border-radius: 15px;
-}
-
-.liveModal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 99; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /*Full width */
-  height: 100%; /*Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  
-}
-
-/* CLOSE Button*/
-.liveClose {
-  color: #292929;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.liveClose:hover,
-.liveClose:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 /*POP UP STATISTICS BOARD SUBURBS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .containerSub1, .containerSub2, .containerSub3, .containerSub4,
@@ -492,28 +451,27 @@ header > h1{
 
 .badge:hover{
   cursor: pointer;
-  background: rgb(88, 141, 63);
+  background: rgb(88, 141, 63);/*#588d3f */
 }
 
 /*LEGEND---------------------------------------------------------------------------------------------------------------------------------------*/
 
 .map-overlay {
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  position: absolute;
-  width: 25%;
-  bottom: 5%;
-  right: 0px;
-  padding: 10px;
+  position: fixed;
   
+
   }
    
   .map-overlay .map-overlay-inner {
   background-color: #e6e6e6;
   box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
-  
+  position: fixed;
   border-radius: 4px;
   padding: 10px;
-  margin-bottom: 10px;
+  right: 0px;
+  bottom: 5%;
+  z-index: 1%;
   }
    
   .map-overlay h2 {
@@ -535,8 +493,10 @@ header > h1{
   position: relative;
   margin: 0;
   cursor: ew-resize;
+  top: 100px;
   }
 
+  /*MARKER STOPS-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .marker {
   background-image: url('images/railstationIconGreen.png');
@@ -572,9 +532,6 @@ header > h1{
   
 }
 
-
-
-
 .mapboxgl-popup-content >h4 {
   background-color: whitesmoke;
   color: #000;
@@ -590,16 +547,67 @@ header > h1{
   font-size: 8px;
 }
 
+/*NAVIGATION BAR & MODAL-----------------------------------------------------------------------------------------------------------------------------------------------*/
 .navbar-default {
   margin-left:auto; 
   margin-right:auto;
-  width:100%;
-  height: 80px;
-  top: 880px;
+  width: 100%;
+  bottom: 100%;
 }
 
+.modal-header > h4 {
+  color: darkred;
+  font-weight: 100;
+  font-family: 'ubuntu', monospace;
+}
 
+.container {
+  position: relative;
+  display: table; /* This is important */ 
+  overflow-y: auto;    
+  overflow-x: auto;
+  width: auto;
+  height: auto;
+}
+/*PROGRESS Donut------------------------------------------------------------------------------------------------------------------------------------------*/
+  
+.circle {
+  width: auto;
+  margin: 2px 2px 2px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 1.2;
+}
 
+.circle canvas {
+  vertical-align: top;
+  width: auto !important;
+}
+
+.circle strong {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  color: black;
+}
+
+.circle strong i {
+  font-style: normal;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+
+.circle span {
+  display: block;
+  color: #aaa;
+  margin-top: 12px;
+}
+    
 /*MAP-----------------------------------------------------------------------------------------------------------------------------------------------*/
 #map {
     border-left: 1px solid #fff;
