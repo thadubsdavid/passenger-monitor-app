@@ -66,8 +66,8 @@ $(document).ready(function ($) {
                   size : 150,
                   thickness: 20,
                   fill: {
-                      color: '#c1e5b0' //green
-                    
+                      color: '#c1e5b0', //green
+                      
                   }
               }).on('circle-animation-progress', function (event, progress, stepValue) {
                   $(this).find('strong').text((stepValue*100).toFixed(0) + "%");

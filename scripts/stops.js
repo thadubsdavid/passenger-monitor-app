@@ -1308,8 +1308,9 @@ var geojson = {
                 new mapboxgl.Marker(pos)
                 .setLngLat(marker.geometry.coordinates)
                 .setPopup(new mapboxgl.Popup({ offset: 25})
-                .setHTML('<h4>' + marker.properties.title + '</h4><p1>' + "Accessibility:\n" + marker.properties.condition + '\n' + '</p1><br><p2>' + "\nLines:\n" + marker.properties.lines + '</p2><br><p3>' + "Entry\n(P/h):\n" + marker.properties.entry + '</p3><br><p4>'+ "Exit\n(P/h):\n" + marker.properties.exit + '</p4><br><p5>'+ "Passenger\nFlow\n(P/h):\n" + marker.properties.passengerTotal + '</p5><br><p6>' + "Pre-Hour\n(%):\n" + marker.properties.passengerPreSession + '\n' + '<img src="images/rotesDreieck.jpg" alt="rotesDreieck" width="14px" height= "10px"></p6><br><p7>' + "Timetable:\n" + '</p7>' + '<a  href="' + marker.properties.plan +'">LIVE!</a><br><p8>' + "\nP/h = Passenger per hour\n" + '</p8>'))
+                .setHTML('<h4>' + marker.properties.title + '</h4><p1>' + "Accessibility:\n" + marker.properties.condition + '\n' + '</p1><br><p2>' + "\nLines:\n" + marker.properties.lines + '</p2><br><p3>' + "Entry\n(P/h):\n" + marker.properties.entry + '</p3><br><p4>'+ "Exit\n(P/h):\n" + marker.properties.exit + '</p4><br><p5>'+ "Passenger\nFlow\n(P/h):\n" + marker.properties.passengerTotal + '</p5><br><p6>' + "Pre-Hour\n(%):\n" + marker.properties.passengerPreSession + '\n' + '<img src="images/rotesDreieck.jpg" alt="rotesDreieck" width="14px" height= "10px">' + '<img src="images/greenTriangle.png" alt="greenTriangle" width="14px" height= "10px"</p6><br><p7>' + "Timetable:\n" + '</p7>' + '<a  href="' + marker.properties.plan +'">LIVE!</a><br><p8>' + "\nP/h = Passenger per hour\n" + '</p8>'))
                 .addTo(map)
+                //red
               });
               
             }

@@ -61,7 +61,10 @@ var end =  Array.from({ length: 10 }, () => Math.floor(Math.random() * 6)+5);
 
 var endRev = end.reverse();
 
-var trend = start.concat(high,endRev) ;
+var modalTrend = start.concat(high);
+console.log(modalTrend)
+
+var trend = start.concat(high,endRev);
 
 console.log(trend)
 /*

@@ -275,7 +275,7 @@
 
       <!-- Modal -->
       <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-lg" >
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -283,30 +283,43 @@
               </div>
               <div class="modal-body">
                 <p id="title">Current occupancy level of Tram 1 in [%]</p>
-                <!--canvas id="lineChartX"></canvas>-->
+                
                 <!--div id="container"></div>-->
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="progressbar">
+                          <div class="progressbar">
                             <div class="second circle" data-percent="77">
                               <strong></strong>
                               <span>Oberreut- <br> Durlach</span>
                             </div>
-                            </div>
+                          </div>
                         </div>
                         
                         <div class="col-sm-4">
-                            <div class="progressbar">
+                          <div class="progressbar">
                             <div class="second circle" data-percent="55">
                               <strong></strong>
                               <span>Durlach- <br> Oberreut</span>
                             </div>
-                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
               </div>
+              
+            <div class="modal-body">
+                <div class="chartModal">
+                  <div class="row">
+                    <div class="lineChartModalLeft">
+                      <canvas id="lineChart11"></canvas>
+                      <canvas id="lineChart12"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            
               <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-prev">Prev</button>
                 <button type="button" class="btn btn-default btn-next">Next</button>
@@ -320,13 +333,13 @@
 
       <!-- Modal -->
       <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg" >
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="livestamp"><br></h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" >
               <p id="title">Current occupancy level of Tram 2 in [%]</p>
               <div class="container">
                   <div class="row">
@@ -347,8 +360,21 @@
                           </div>
                           </div>
                       </div>
+                    </div>
                   </div>
-              </div>
+                </div>
+
+                  <div class="modal-body" >
+                      <div class="chartModal">
+                        <div class="row">
+                          <div class="lineChartModalLeft">
+                            <canvas id="lineChart21"></canvas>
+                            <canvas id="lineChart22"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-prev">Prev</button>
@@ -365,7 +391,7 @@
 
       <!-- Modal -->
       <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -392,6 +418,17 @@
                             </div>
                             </div>
                         </div>
+                        <div class="modal-body">
+                            <div class="chartModal">
+                              <div class="row">
+                                <div class="lineChartModalLeft">
+                                  <canvas id="lineChartX"></canvas>
+                                  <canvas id="lineChartY"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -410,7 +447,7 @@
 
       <!-- Modal -->
       <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -437,6 +474,17 @@
                             </div>
                             </div>
                         </div>
+                        <div class="modal-body">
+                            <div class="chartModal">
+                              <div class="row">
+                                <div class="lineChartModalLeft">
+                                  <canvas id="lineChartX"></canvas>
+                                  <canvas id="lineChartY"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -452,7 +500,7 @@
 
       <!-- Modal -->
       <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -479,6 +527,17 @@
                               </div>
                               </div>
                           </div>
+                          <div class="modal-body">
+                              <div class="chartModal">
+                                <div class="row">
+                                  <div class="lineChartModalLeft">
+                                    <canvas id="lineChartX"></canvas>
+                                    <canvas id="lineChartY"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                       </div>
                   </div>
               </div>
@@ -493,7 +552,7 @@
 
         <!-- Modal -->
       <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -519,6 +578,17 @@
                                 <span>Ettlingen- <br> Neureut</span>
                               </div>
                               </div>
+                          </div>
+                          <div class="modal-body">
+                              <div class="chartModal">
+                                <div class="row">
+                                  <div class="lineChartModalLeft">
+                                    <canvas id="lineChartX"></canvas>
+                                    <canvas id="lineChartY"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                       </div>
                   </div>

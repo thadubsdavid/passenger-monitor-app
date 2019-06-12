@@ -464,8 +464,6 @@ header > h1{
   }
    
   .map-overlay .map-overlay-inner {
-  background-color: #e6e6e6;
-  box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
   position: fixed;
   border-radius: 4px;
   padding: 10px;
@@ -525,23 +523,22 @@ header > h1{
 .mapboxgl-popup-content {
   text-align: left;
   font-family: 'Ubuntu', monospace;
-  color: white;
+  color: rgb(94, 94, 94);
   word-wrap: none;
-  background-color: #888888;
+  background-color: #797979;
   opacity: 0.8;
-  
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
 .mapboxgl-popup-content >h4 {
-  background-color: whitesmoke;
+  background-color: #9e9e9e;
   color: #000;
   text-align: center;
   border-radius: 4px;
 }
 
 .mapboxgl-popup-content >p8 {
-  background-color: #888888;
-  color: lightgrey;
+  color: black;
   text-align: center;
   border-radius: 4px;
   font-size: 8px;
@@ -557,19 +554,36 @@ header > h1{
 
 .modal-header > h4 {
   color: darkred;
-  font-weight: 100;
+  font-weight: bold;
   font-family: 'ubuntu', monospace;
+ 
 }
 
-.container {
+.modal {
   position: relative;
   display: table; /* This is important */ 
   overflow-y: auto;    
   overflow-x: auto;
   width: auto;
   height: auto;
+  padding: 15px;
 }
-/*PROGRESS Donut------------------------------------------------------------------------------------------------------------------------------------------*/
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+}
+
+.container {
+  max-height: 50vh; /* Change line chart positions */
+  max-width: 88vh;  /* Change circles positions */
+  overflow: auto;
+}
+
+
+
+/*MODAL CONTENT Progress Bar and Line Chart------------------------------------------------------------------------------------------------------------------------------------------*/
   
 .circle {
   width: auto;
@@ -578,6 +592,18 @@ header > h1{
   position: relative;
   text-align: center;
   line-height: 1.2;
+  left: 190px; /*Triggers circles to left and right*/
+}
+
+#title {
+  left: 300px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  box-shadow:0 5px 5px rgba(0, 0, 0, 0.20);
+  border-radius: 4px;
+  font-family: 'ubuntu', monospace;
 }
 
 .circle canvas {
@@ -594,6 +620,7 @@ header > h1{
   line-height: 40px;
   font-size: 30px;
   color: black;
+  font-family: 'ubuntu', monospace;
 }
 
 .circle strong i {
@@ -607,7 +634,22 @@ header > h1{
   color: #aaa;
   margin-top: 12px;
 }
-    
+
+.lineChartModalLeft {
+  width: 100%;
+  box-shadow:0 5px 5px rgb(235, 235, 235);
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.lineChartModalRight {
+  width: 100%;
+  box-shadow:0 5px 5px rgb(235, 235, 235);
+  border-radius: 4px;
+}
+
+
+
 /*MAP-----------------------------------------------------------------------------------------------------------------------------------------------*/
 #map {
     border-left: 1px solid #fff;
