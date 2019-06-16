@@ -502,7 +502,7 @@ $('#sub1').change(function() {
     type: "fill",
     source: "subSuedWest",
     paint: {
-          'fill-color': '#ff6633', //red
+          'fill-color': '#D6BB35', //red
           'fill-opacity': 0.2
   }
   });

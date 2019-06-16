@@ -1,4 +1,42 @@
-//Data Generator #1 ENTRY Sub------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Data Generator UPDATED Lines------------------------------------------------------------------------------------------------------------------------------
+
+//Math.floor(Math.random() * (max - min + 1)) + min;
+var startLines = Array.from({ length: 5 }, () => Math.floor(Math.random() * 6)+5);
+var highLines = Array.from({ length: 5 }, () => Math.floor(Math.random() * 51) + 100);
+var midLines = Array.from({length: 10 }, () => Math.floor(Math.random() * 51) + 50)
+var lowLines =  Array.from({ length: 10 }, () => Math.floor(Math.random() * 36)+15);
+
+var endRev = startLines.reverse();
+
+var trendModerat = startLines.concat(highLines,startLines);
+console.log(modalTrend)
+
+var trend = startLines.concat(midLines,highLines,endRev);
+console.log(trend)
+
+var trendLong = startLines.concat(midLines,highLines,lowLines,startLines)
+
+var trendT5 = startLines.concat(midLines,startLines,midLines);
+//Data Generator UPDATED Suburbs------------------------------------------------------------------------------------------------------------------------------
+var entryTyp1 = Array.from({ length: 15 }, () => Math.floor(Math.random() * 2001)+ 7000); //max 9000
+var exitTyp1 = Array.from({ length: 15 }, () => Math.floor(Math.random() * 2001) + 4000); //max 6000
+
+var entryTyp2 = Array.from({ length: 15 }, () => Math.floor(Math.random() * 601)+ 2800); //max 3400
+var exitTyp2 = Array.from({ length: 15 }, () => Math.floor(Math.random() * 601) + 2300); //max 2900
+
+var entryTyp3 = Array.from({ length: 15 }, () => Math.floor(Math.random() * 201)+ 2000); //max 2200
+var exitTyp3 = Array.from({ length: 15 }, () => Math.floor(Math.random() * 201) + 1600); //max 1800
+
+
+
+var dataLow = Array.from({ length: 5 }, () => Math.floor(Math.random() * 201) + 1600); //max 1800
+var dataHigh = Array.from({ length: 5 }, () => Math.floor(Math.random() * 601)+ 2800); //max 3400
+var dataMid = Array.from({ length: 5 }, () => Math.floor(Math.random() * 201)+ 2000); //max 2200
+
+var trendSub = dataLow.concat(dataHigh,dataMid)
+
+
+/*
 for (var dummyEntry =[],i=0;i<800;++i) dummyEntry[i]=i;
 
 function shuffle(array) {
@@ -17,7 +55,7 @@ dummyEntry = shuffle(dummyEntry);
 
 //Data Generator #2 EXIT Sub-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-for (var dummyExit =[],i=200;i<800;++i) dummyExit[i]=i;
+for (var dummyExit =[],i=0;i<800;++i) dummyExit[i]=i;
 
 function shuffle(array) {
 
@@ -51,49 +89,4 @@ function shuffle(array) {
 }
 dummy = shuffle(dummy);
 console.log(dummy);
-
-//Data Generator UPDATED------------------------------------------------------------------------------------------------------------------------------
-
-//Math.floor(Math.random() * (max - min + 1)) + min;
-var start = Array.from({ length: 10 }, () => Math.floor(Math.random() * 6)+5);
-var high = Array.from({ length: 10 }, () => Math.floor(Math.random() * 51) + 100);
-var end =  Array.from({ length: 10 }, () => Math.floor(Math.random() * 6)+5);
-
-var endRev = end.reverse();
-
-var modalTrend = start.concat(high);
-console.log(modalTrend)
-
-var trend = start.concat(high,endRev);
-
-console.log(trend)
-/*
-$(function () {
-    function randomNumber(minimum, maximum){
-        return Math.round( Math.random() * (maximum - minimum) + minimum);
-    }
-    var d1 = [];
-    var trendData;
-    
-    for (var  x = 1; x < 100; x++)  {
-        function randomNumber(minimum, maximum){
-            return Math.round( Math.random() * (maximum - minimum) + minimum);
-        }
-        trendData = randomNumber(x,100);
-        
-        // @strah
-       var a = 0.05;
-       var b = 1;
-       trendData = a * x^2 + randomNumber(b * x^2, b * x / 2) ;
-       //console.log(trendData)
-       d1.unshift(trendData);
-       console.log(d1)
-        
-        //$('textarea').append(y + "\t");
-    }
-    
-    
-});
 */
-
-

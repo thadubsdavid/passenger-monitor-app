@@ -1,6 +1,6 @@
+//Dummy Data Calculator------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-// Initial Variables-------------------------------------------------------------------------------------------------------------------------------------
+// Initial Variables-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var barChartSub1 = document.getElementById('barChart1').getContext('2d');
 var barChartSub2 = document.getElementById('barChart2').getContext('2d');
 var barChartSub3 = document.getElementById('barChart3').getContext('2d');
@@ -26,13 +26,13 @@ function addChartSub1 () {
                 backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'blue',
-                data: dummyEntry
+                data: entryTyp1
             },{
                 label: 'Exit P/h',
                 backgroundColor: 'rgb(52, 220, 110)', //green
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'green',
-                data: dummyExit
+                data: exitTyp1
             }
         ]
         },
@@ -42,7 +42,7 @@ function addChartSub1 () {
                 yAxes: [{
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 1000
+                        suggestedMax: 9000
                     }
                 }]
             }
@@ -64,13 +64,13 @@ function addChartSub2 () {
                 backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'blue',
-                data: dummyEntry
+                data: entryTyp1
             },{
                 label: 'Exit P/h',
                 backgroundColor: 'rgb(52, 220, 110)', //green
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'green',
-                data: dummyExit
+                data: exitTyp1
             }
         ]
         }, 
@@ -79,7 +79,7 @@ function addChartSub2 () {
                     yAxes: [{
                         ticks: {
                             suggestedMin: 0,
-                            suggestedMax: 1000
+                            suggestedMax: 9000
                         }
                     }]
                 }
@@ -90,7 +90,7 @@ function addChartSub2 () {
 
 function addChartSub3 () {
     var chart = new Chart(barChartSub3, {
-        id: 'barChartSub3',
+        id: 'ChartSubWest',
         type: 'bar',
 
         data: {
@@ -102,13 +102,13 @@ function addChartSub3 () {
                 backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'blue',
-                data: dummyEntry
+                data: trendSub
             },{
                 label: 'Exit P/h',
                 backgroundColor: 'rgb(52, 220, 110)', //green
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'green',
-                data: dummyExit
+                data: exitTyp2
             }
         ]
             
@@ -119,7 +119,7 @@ function addChartSub3 () {
                 yAxes: [{
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 1000
+                        suggestedMax: 10000
                     }
                 }]
             }
@@ -129,7 +129,7 @@ function addChartSub3 () {
 
 function addChartSub4 () {
     var chart = new Chart(barChartSub4, {
-        id: 'barChartSub4',
+        id: 'barChartSubSuedWest',
         type: 'bar',
 
         data: {
@@ -141,13 +141,13 @@ function addChartSub4 () {
                 backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'blue',
-                data: dummyEntry
+                data: entryTyp2
             },{
                 label: 'Exit P/h',
                 backgroundColor: 'rgb(52, 220, 110)', //green
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'green',
-                data: dummyExit
+                data: trendSub
             }
         ]
         },
@@ -157,7 +157,7 @@ function addChartSub4 () {
                 yAxes: [{
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 1000
+                        suggestedMax: 10000
                     }
                 }]
             }
@@ -167,7 +167,7 @@ function addChartSub4 () {
 
 function addChartSub5 () {
     var chart = new Chart(barChartSub5, {
-        id: 'barChartSub5',
+        id: 'barChartSubNordWest',
         type: 'bar',
 
         data: {
@@ -179,13 +179,13 @@ function addChartSub5 () {
                 backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'blue',
-                data: dummyEntry
+                data: trendSub
             },{
                 label: 'Exit P/h',
                 backgroundColor: 'rgb(52, 220, 110)', //green
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'green',
-                data: dummyExit
+                data: exitTyp2
             }
         ]
         },
@@ -195,7 +195,7 @@ function addChartSub5 () {
                 yAxes: [{
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 1000
+                        suggestedMax: 10000
                     }
                 }]
             }
@@ -205,7 +205,7 @@ function addChartSub5 () {
 
 function addChartSub6 () {
     var chart = new Chart(barChartSub6, {
-        id: 'barChartSub6',
+        id: 'barChartSubSued',
         type: 'bar',
 
         data: {
@@ -217,13 +217,13 @@ function addChartSub6 () {
                 backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'blue',
-                data: dummyEntry
+                data: entryTyp3
             },{
                 label: 'Exit P/h',
                 backgroundColor: 'rgb(52, 220, 110)', //green
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'green',
-                data: dummyExit
+                data: trendSub
             }
         ]
         },
@@ -233,7 +233,7 @@ function addChartSub6 () {
                 yAxes: [{
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 1000
+                        suggestedMax: 10000
                     }
                 }]
             }
@@ -243,7 +243,7 @@ function addChartSub6 () {
 
 function addChartSub7 () {
     var chart = new Chart(barChartSub7, {
-        id: 'barChartSub7',
+        id: 'barChartNord',
         type: 'bar',
 
         data: {
@@ -255,13 +255,13 @@ function addChartSub7 () {
                 backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'blue',
-                data: dummyEntry
+                data: trendSub
             },{
                 label: 'Exit P/h',
                 backgroundColor: 'rgb(52, 220, 110)', //green
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'green',
-                data: dummyExit
+                data: exitTyp3
             }
         ]
         },
@@ -271,7 +271,7 @@ function addChartSub7 () {
                 yAxes: [{
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 1000
+                        suggestedMax: 10000
                     }
                 }]
             }
@@ -281,7 +281,7 @@ function addChartSub7 () {
 
 function addChartSub8 () {
     var chart = new Chart(barChartSub8, {
-        id: 'barChartSub8',
+        id: 'barChartSubOst',
         type: 'bar',
 
         data: {
@@ -293,13 +293,13 @@ function addChartSub8 () {
                 backgroundColor: 'rgb(0, 184, 230)', //blue
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'blue',
-                data: dummyEntry
+                data: entryTyp2 
             },{
                 label: 'Exit P/h',
                 backgroundColor: 'rgb(52, 220, 110)', //green
                 borderColor: 'rgb(70,130,180)',
                 //fillcolor: 'green',
-                data: dummyExit
+                data: trendSub
             }
         ]
         },
@@ -309,7 +309,7 @@ function addChartSub8 () {
                 yAxes: [{
                     ticks: {
                         suggestedMin: 0,
-                        suggestedMax: 1000
+                        suggestedMax: 10000
                     }
                 }]
             }

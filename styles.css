@@ -11,33 +11,16 @@ body {
     font-family: 'Ubuntu Mono', monospace;
   }
   
-
+.containerSub8 > h3 {
+  color: #000
+}
 
 .bottomBar {
   background-color: #b71515;
 }
-/*
-header{
-    text-align: center;
-    font-family: 'Ubuntu Mono', monospace;
-    display: inline-block;
-}
 
-header > h1{
-    color: black;
-    position: fixed;
-    z-index: 99;
-    text-align: center;
-    font-size: 25px;
-    padding: 15px;
-    top: -20px;
-    left:  585px;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-*/
 .badge{
-  background: #888888;
+  background: #dfdfdf;
   color: whitesmoke;
   border: 1px solid whitesmoke;
   border-radius: 100px;
@@ -50,43 +33,7 @@ header > h1{
   font-family: 'Ubuntu Mono', monospace;
   width: 30px;
 }
-/*
-#linesBtn{
-  z-index: 99;
-  position: absolute;
-  top: 800px;
-  left: 215px;
-  box-shadow:0 1px 2px rgba(153, 118, 118, 0.2);   
-}
 
-#statisticsBtn {
-  z-index: 99;
-  position: absolute;
-  top: 800px;
-  left: 300px;
-  box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
-}
-
-#liveBtn {
-  z-index: 99;
-  position: absolute;
-  top: 800px;
-  left: 20px;
-  color: darkred;
-  font-weight: bold;
-  font-size: 13px;
-  box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
-  
-}
-
-#suburbBtn{
-  z-index: 99;
-  position: absolute;
-  top: 800px;
-  left: 100px;
-  box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
-}
-*/
 .addition{
   z-index: 99;
   background: none;
@@ -109,21 +56,7 @@ header > h1{
 }
 
 /*MODAL ABOUT-------------------------------------------------------------------------------------------------------*/
-/*
-#aboutBtn {
-  z-index: 99;
-  background: none;
-  position: absolute;
-  font-size: 15px;
-  border: none;
-  top: 200px;
-  left: 1370px;
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 20px;
-  font-weight: bold;
-  transition: all 1;
-}
-*/
+
 .abModal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -222,13 +155,12 @@ header > h1{
 }
 
 
-/*MODAL LIVE----------------------------------------------------------------------------------------------*/
 
 /*POP UP STATISTICS BOARD SUBURBS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .containerSub1, .containerSub2, .containerSub3, .containerSub4,
 .containerSub5, .containerSub6, .containerSub7, .containerSub8 > h3 {
-  color: darkgrey;
+  color: rgb(122, 122, 122);
   text-align: center;
   position: relative;
   margin: 0;
@@ -239,170 +171,62 @@ header > h1{
  .containerSub5, .containerSub6, .containerSub7, .containerSub8 {
   position: fixed;
   display: none;
-  background: #888888;
+  background: #e6e6e6;
   color: whitesmoke;
   border: 1px solid whitesmoke;
   border-radius: 10px; 
-  width: 25%;
-  height: 25%;
+  width: 35%;
+  height: 30%;
   top: 15px;
   left: 15px;
   z-index: 99;
+  box-shadow:0 5px 10px rgba(46, 46, 46, 0.1);
+
 }
 
 
 /*POP UP STATISTICS BOARD LINES------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .containerLines1, .containerLines2, .containerLines3,
 .containerLines5, .containerLinesS1, .containerLinesS2 > h2 {
-  color: darkgrey;
-  text-align: center;
-  position: relative;
-  margin: 0;
-  top: 45%;
-}
-/*
-.containerLines2 > h2 {
-  color: darkgrey;
+  color: rgb(121, 121, 121);
   text-align: center;
   position: relative;
   margin: 0;
   top: 45%;
 }
 
-
-.containerLines3 > h2 {
-  color: darkgrey;
-  text-align: center;
-  position: relative;
-  margin: 0;
-  top: 45%;
-}
-
-.containerLines5 > h2 {
-  color: darkgrey;
-  text-align: center;
-  position: relative;
-  margin: 0;
-  top: 45%;
-}
-
-.containerLinesS1 > h2 {
-  color: darkgrey;
-  text-align: center;
-  position: relative;
-  margin: 0;
-  top: 45%;
-}
-
-.containerLinesS2 > h2 {
-  color: darkgrey;
-  text-align: center;
-  position: relative;
-  margin: 0;
-  top: 45%;
-}
-*/
 
 .containerLines1, .containerLines2, .containerLines3, 
 .containerLines5, .containerLinesS1, .containerLinesS2 {
   position: fixed;
   display: none;
-  background: #888888;
+  background: #d8d8d8;
   color: whitesmoke;
-  border: 1px solid whitesmoke;
+  border: 2px solid whitesmoke;
   border-radius: 10px; 
-  width: 25%;
-  height: 25%;
+  width: 35%;
+  height: 30%;
   top: 15px;
   left: 15px;
   z-index: 99;
-}
-/*
-.containerLines2 {
-  position: fixed;
-  background: #888888;
-  display: none;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
-  border-radius: 10px; 
-  width: 25%;
-  height: 25%;
-  top: 15px;
-  left: 15px;
-  z-index: 99;
+  box-shadow:0 5px 10px rgba(46, 46, 46, 0.1);
+
 }
 
-
-.containerLines3 {
-  position: fixed;
-  background: #888888;
-  display: none;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
-  border-radius: 10px; 
-  width: 25%;
-  height: 25%;
-  top: 15px;
-  left: 15px;
-  z-index: 99;
-}
-
-.containerLines5 {
-  position: fixed;
-  background: #888888;
-  display: none;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
-  border-radius: 10px; 
-  width: 25%;
-  height: 25%;
-  top: 15px;
-  left: 15px;
-  z-index: 99;
-}
-
-.containerLinesS1 {
-  position: fixed;
-  background: #888888;
-  display: none;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
-  border-radius: 10px; 
-  width: 25%;
-  height: 25%;
-  top: 15px;
-  left: 15px;
-  z-index: 99;
-}
-
-.containerLinesS2 {
-  position: fixed;
-  background: #888888;
-  display: none;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
-  border-radius: 10px; 
-  width: 25%;
-  height: 25%;
-  top: 15px;
-  left: 15px;
-  z-index: 99;
-}
-
-*/
 /* Sidebar NETWORK lines----------------------------------------------------------------------------------------------------------------------*/
 #sidebarLine{
   position: absolute;
   display: none;
   z-index: 1;
-  color: whitesmoke;
-  background: #888888;
+  color: rgb(145, 145, 145);
+  background: #dbdbdb;
   border: 2px solid white;
   border-radius: 4px;
   right: 20px;
   top: 460px;
   font-family: 'Ubuntu', monospace;
-  padding: 15px;
+  padding: 10px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.10);
 }
 
 .lin {
@@ -422,14 +246,15 @@ header > h1{
   position: absolute;
   display: none;
   z-index: 1;
-  color: whitesmoke;
-  background: #888888;
+  color: rgb(145, 145, 145);
+  background: #dbdbdb;
   border: 2px solid white;
   border-radius: 4px;
   right: 20px;
   top: 200px;
   font-family: 'Ubuntu', monospace;
-  padding: 15px;
+  padding: 10px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
 .sub {
@@ -439,15 +264,6 @@ header > h1{
 .sub > h3{
   font-weight: bold;
 }
-
-/*
-.container{
-  position: absolute;
-  z-index: 99;
-  background: red;
-  left: 200px;
-}
-*/
 
 .badge:hover{
   cursor: pointer;

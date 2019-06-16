@@ -281,12 +281,13 @@ function addLayerLine2() {
 // ON OFF TRAM 3-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 $('#lin3').change(function() {
   if($(this).is(":checked")) {
+
     addLayerLine3();
     addChart3();
     console.log('TEST tram3')
+    $('#statisticsLines3').show();
     $('#statisticsLines1').hide();
     $('#statisticsLines2').hide();
-    $('#statisticsLines3').show();
     $('#statisticsLines5').hide();
     $('#statisticsLinesS1').hide();
     $('#statisitcsLinesS2').hide();

@@ -63,7 +63,7 @@ function addChart2 () {
                 label: 'Besetzungsgrad Tram 2',
                 backgroundColor: 'rgb(70,130,180)',
                 borderColor: 'rgb(0,26,4)',
-                data: dummy
+                data: trendLong
                 
             }]
         },
@@ -98,7 +98,7 @@ function addChart3 () {
                 label: 'Besetzungsgrad Tram 3',
                 backgroundColor: 'rgb(70,130,180)',
                 borderColor: 'rgb(0,26,4)',
-                data: dummy                   
+                data: trendModerat                
                                    
     
             }]
@@ -124,14 +124,23 @@ function addChart5 () {
                 label: 'Besetzungsgrad Tram 5',
                 backgroundColor: 'rgb(70,130,180)',
                 borderColor: 'rgb(0,26,4)',
-                data: dummy
+                data: trendT5
 
 
             }]
         },
     
         // Configuration options go here
-        options: {}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 200
+                    }
+                }]
+            }
+        }
     });
 }
 
@@ -150,14 +159,23 @@ function addChartS1() {
                 label: 'Besetzungsgrad S1',
                 backgroundColor: 'rgb(70,130,180)',
                 borderColor: 'rgb(0,26,4)',
-                data: dummy
+                data: trendLong
                     
                                    
             }]
         },
     
         // Configuration options go here
-        options: {}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 200
+                    }
+                }]
+            }
+        }
     });
 }
 
@@ -177,14 +195,23 @@ function addChartS2 () {
                 backgroundColor: 'rgb(70,130,180)',
                 borderColor: 'rgb(0,26,4)',
                 data: 
-                    dummy
+                    trendLong
                                    
                 
             }]
         },
     
         // Configuration options go here
-        options: {}
+        options:{
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 200
+                    }
+                }]
+            }
+        }
     });
 }
 
