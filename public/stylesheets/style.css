@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet');
+*{
+  box-sizing: border-box; 
+}
+
+body {
+    background: #404040;
+    color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Mono', monospace;
+  }
+  
+.containerSub8 > h3 {
+  color: #000
+}
+
+.bottomBar {
+  background-color: #b71515;
+}
+
+.badge{
+  background: #dfdfdf;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 100px;
+  transition: all 1s;
+  padding: 15px; 
+}
+
+.visualization{
+  display: inline-flex;
+  font-family: 'Ubuntu Mono', monospace;
+  width: 30px;
+}
+
+.addition{
+  z-index: 99;
+  background: none;
+  position: absolute;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  top: 840px;
+  right: 30px;
+  padding: 10px;
+  border: none;
+  transition: all 1s;
+}
+
+#aboutText{
+  z-index: 99;
+  background: none;
+  position: absolute;
+  font-size: 15px;
+}
+
+/*MODAL ABOUT-------------------------------------------------------------------------------------------------------*/
+
+.abModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  
+}
+
+.aboutModalContent {
+  background-color: whitesmoke(110, 170, 170);
+  z-index: 99;
+  margin: auto;
+  padding: 10px;
+  padding: 20px;
+  border: 0.5px solid rgb(175, 175, 175); 
+  width: 80%;
+  font-family: 'Ubuntu Mono', monospace;
+  border-radius: 15px;
+}
+
+/*CLOSE nad HOVER function Button */
+.aboutClose {
+  color: #292929;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.aboutClose:hover,
+.aboutClose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#aboutBtn:hover{
+  cursor: pointer;
+  color: rgb(88, 141, 63);
+  transition: all 2s;
+}
+
+/*MODAL STATISTICS----------------------------------------------------------------------------------------------*/
+
+.statModalContent {
+  background-color: whitesmoke(110, 170, 170);
+  z-index: 99;
+  margin: auto;
+  padding: 10px;
+  padding: 20px;
+  border: 0.5px solid rgb(175, 175, 175); 
+  width: 80%;
+  font-family: 'Ubuntu Mono', monospace;
+  border-radius: 15px;
+}
+
+.statModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  
+}
+
+.aboutModalContent > h8 {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.aboutModalContent > h7 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.aboutModalContent > p {
+  font-weight: bold;
+}
+
+/* CLOSE Button*/
+.statClose {
+  color: #292929;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.statClose:hover,
+.statClose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.av{
+  position: absolute;
+  z-index: 99;
+}
+
+
+
+/*POP UP STATISTICS BOARD SUBURBS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.containerSub1, .containerSub2, .containerSub3, .containerSub4,
+.containerSub5, .containerSub6, .containerSub7, .containerSub8 > h3 {
+  color: rgb(122, 122, 122);
+  text-align: center;
+  position: relative;
+  margin: 0;
+  top: 45%;
+}
+
+.containerSub1, .containerSub2, .containerSub3, .containerSub4,
+ .containerSub5, .containerSub6, .containerSub7, .containerSub8 {
+  position: fixed;
+  display: none;
+  background: #e6e6e6;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 10px; 
+  width: 35%;
+  height: 30%;
+  top: 25px;
+  left: 15px;
+  z-index: 99;
+  box-shadow:0 5px 10px rgba(46, 46, 46, 0.1);
+
+}
+
+
+/*POP UP STATISTICS BOARD LINES------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.containerLines1, .containerLines2, .containerLines3,
+.containerLines5, .containerLinesS1, .containerLinesS2 > h2 {
+  color: rgb(121, 121, 121);
+  text-align: center;
+  position: relative;
+  margin: 0;
+  top: 45%;
+}
+
+
+.containerLines1, .containerLines2, .containerLines3, 
+.containerLines5, .containerLinesS1, .containerLinesS2 {
+  position: fixed;
+  display: none;
+  background: #d8d8d8;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 10px; 
+  width: 35%;
+  height: 30%;
+  top: 25px;
+  left: 15px;
+  z-index: 99;
+  box-shadow:0 5px 10px rgba(46, 46, 46, 0.1);
+
+}
+
+/* Sidebar NETWORK lines----------------------------------------------------------------------------------------------------------------------*/
+#sidebarLine{
+  position: absolute;
+  display: none;
+  z-index: 1;
+  color: rgb(145, 145, 145);
+  background: #dbdbdb;
+  border: 2px solid white;
+  border-radius: 4px;
+  right: 20px;
+  top: 460px;
+  font-family: 'Ubuntu', monospace;
+  padding: 10px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.10);
+}
+
+.lin {
+  font-weight: bold;
+}
+
+.lines > h3{
+  font-weight: bold;
+}
+
+#linS7, #linS5, #lin6 {
+  opacity: 0.5;
+}
+
+/* Sidebar network suburbs----------------------------------------------------------------------------------------------------------------------*/
+#sidebarSuburb{
+  position: absolute;
+  display: none;
+  z-index: 1;
+  color: rgb(145, 145, 145);
+  background: #dbdbdb;
+  border: 2px solid white;
+  border-radius: 4px;
+  right: 20px;
+  top: 180px;
+  font-family: 'Ubuntu', monospace;
+  padding: 10px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.sub {
+  font-weight: bold;
+}
+
+.sub > h3{
+  font-weight: bold;
+}
+
+.badge:hover{
+  cursor: pointer;
+  background: rgb(88, 141, 63);/*#588d3f */
+}
+
+.navbar-btn:hover {
+
+  cursor: pointer;
+  background: rgb(230, 230, 230);/*#588d3f */
+
+}
+
+/*LEGEND / SLIDER---------------------------------------------------------------------------------------------------------------------------------------*/
+
+#legendSub {
+  display: inline-block;
+}
+
+#legendLin {
+  display: inline-block;
+}
+.map-overlay {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  position: fixed;
+  
+  }
+
+  .map-overlay .map-overlay-inner-top {
+    position: fixed;
+    border-radius: 4px;
+    padding: 10px;
+    right: 0px;
+    bottom: 12%;
+    z-index: 1%;
+    }
+   
+   
+  .map-overlay .map-overlay-inner {
+  position: fixed;
+  border-radius: 4px;
+  padding: 10px;
+  right: 0px;
+  bottom: 8%;
+  z-index: 1%;
+  }
+
+
+  .map-overlay h2 {
+  line-height: 24px;
+  display: none;
+  margin: 0 0 10px;
+  }
+   
+  .map-overlay .legend .bar {
+  height: 10px;
+  width: 100%;
+  background: linear-gradient(to right, #41ee41, #cca100, #cca700, #ce7f2f, #cc6600, #b71515);
+  }
+
+  .map-overlay .legend .bar-top {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right,#BCE6EE, #A8D4DD, #95C2CC, #81AFBA, #6D9DA9, #4F828F, #3B707E, #285D6D, #144B5B, #00394A) ;
+    }
+    
+  .map-overlay input {
+  background-color: transparent;
+  display: none;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  cursor: ew-resize;
+  top: 100px;
+  }
+
+
+  .containerSL {
+    width: 20%;
+    height: 15px;
+    position: fixed;
+    margin:auto;
+    left: 1%;
+    bottom: 10%;
+    
+
+  }
+  
+  .containerSL > span {
+    font-weight: bold;
+
+  }
+
+  .slider {
+    width: 100%;
+    height: 15px;
+    -webkit-appearance:none;
+    border-radius: 5px;
+    background-color: rgb(185, 185, 185);
+    outline: none;
+    box-shadow: inset 0 3px 18px rgba(0, 0, 0, 0.6)
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    width: 20px;
+    height: 15px;
+    background-color: white;
+    border-radius: 5%;
+    cursor:pointer;
+    outline: none;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.10)
+                0 0 0 6px white;
+
+  }
+
+  .slider:active::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.10)
+                0 0 0 6px white;
+
+  }
+
+  #value {
+    color:rgb(0, 0, 0);
+    font-size: 13px;
+    position: relative;
+    
+  }
+
+
+  .containerDaySlider {
+    width: 20%;
+    height: 50px;
+    position: fixed;
+    margin:auto;
+    left: 1%;
+    bottom: 12%;
+    
+
+  }
+  
+  .containerDaySlider > span {
+    font-weight: bold;
+
+  }
+
+  .sliderDay {
+    width: 100%;
+    height: 15px;
+    -webkit-appearance:none;
+    border-radius: 5px;
+    background-color: rgb(185, 185, 185);
+    outline: none;
+    box-shadow: inset 0 3px 18px rgba(0, 0, 0, 0.6)
+  }
+
+  .sliderDay::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    width: 20px;
+    height: 15px;
+    background-color: white;
+    border-radius: 5%;
+    cursor:pointer;
+    outline: none;
+  }
+
+  .sliderDay::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.10)
+                0 0 0 6px white;
+
+  }
+
+  .sliderDay:active::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.10)
+                0 0 0 6px white;
+
+  }
+
+  #valueDay {
+    color:rgb(0, 0, 0);
+    font-size: 13px;
+    position: relative;
+    
+  }
+
+  .livestampShort {
+    padding: 20px;
+    left: 1050px; /*move date to right and left*/
+    right: 100px;
+    bottom: 20px;
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  /*MARKER STOPS-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.marker {
+  background-image: url('/images/railstationIconGreen.png');
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.marker2 {
+  background-image: url('/images/railstationIconGreen.png');
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: left;
+  font-family: 'Ubuntu', monospace;
+  color: rgb(94, 94, 94);
+  word-wrap: none;
+  background-color: #e0e0e0;
+  opacity: 0.8;
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.mapboxgl-popup-content >h4 {
+  background-color: #9e9e9e;
+  color: #000;
+  text-align: center;
+  border-radius: 4px;
+}
+.mapboxgl-popup-content >h6 {
+  background-color: #9e9e9e;
+  color: #000;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.mapboxgl-popup-content >p8 {
+  color: black;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 8px;
+}
+
+/*NAVIGATION BAR & MODAL-----------------------------------------------------------------------------------------------------------------------------------------------*/
+.navbar.transparent.navbar-default .navbar-inner {
+  background: rgba(0,0,0,0.4);
+}
+
+.navbar-default {
+  margin-left:auto; 
+  margin-right:auto;
+  width: 100%;
+  bottom: 100%;
+  color: #000;
+  box-shadow: 0 10px 20px rgba(173, 136, 136, 0.2);
+}
+
+.navbar-brand > #project {
+  font-weight: bold;
+  color: rgb(83, 83, 83);
+  font-size: 20px;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.modal-header > h4 {
+  color: darkred;
+  font-weight: bold;
+  font-family: 'ubuntu', monospace;
+ 
+}
+
+.modal {
+  position: relative;
+  display: table; /* This is important */ 
+  overflow-y: auto;    
+  overflow-x: auto;
+  width: auto;
+  height: auto;
+  padding: 15px;
+}
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+}
+
+.container {
+  max-height: 50vh; /* Change line chart positions */
+  max-width: 87vh;  /* Change circles positions */
+  overflow: auto;
+}
+
+
+
+/*MODAL CONTENT Progress Bar and Line Chart------------------------------------------------------------------------------------------------------------------------------------------*/
+  
+.circle {
+  width: auto;
+  margin: 2px 2px 2px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 1.2;
+  left: 190px; /*Triggers circles to left and right*/
+}
+
+#title {
+  left: 300px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  box-shadow:0 5px 5px rgba(0, 0, 0, 0.20);
+  border-radius: 4px;
+  font-family: 'ubuntu', monospace;
+}
+
+.circle canvas {
+  vertical-align: top;
+  width: auto !important;
+}
+
+.circle strong {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  color: black;
+  font-family: 'ubuntu', monospace;
+}
+
+.circle strong i {
+  font-style: normal;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+
+.circle span {
+  display: block;
+  color: #aaa;
+  margin-top: 12px;
+}
+
+.lineChartModalLeft {
+  width: 100%;
+  box-shadow:0 5px 5px rgb(235, 235, 235);
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.lineChartModalRight {
+  width: 100%;
+  box-shadow:0 5px 5px rgb(235, 235, 235);
+  border-radius: 4px;
+}
+
+#suburbBtn, #linesBtn, #liveBtn, #aboutBtn ,#statisticsBtn {
+  display: inline-block;
+  
+}
+
+
+
+/*MAP-----------------------------------------------------------------------------------------------------------------------------------------------*/
+#map {
+    border-left: 1px solid #fff;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+  }
+  
+
+
+
+
+
+
+
