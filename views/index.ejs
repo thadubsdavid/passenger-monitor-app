@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+    
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+        <title> Passenger Flow </title>
+
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+
+        <link href="/dist/bootstrap-slider.css" rel="stylesheet">
+        <script src="/dist/bootstrap-slider.js"></script>
+
+        <link rel="stylesheet" href="/stylesheets/style.css"/>
+        <script src="/jquery/jquery.min.js"></script> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        
+        
+        <!--link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />-->
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script src="/dist/progressbar.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-slider.css" media="screen" />
+        <script type="text/javascript" src="/javascripts/bootstrap-slider.js"></script>
+
+    </head>
+    
+
+    
+        <div class="visualization">
+            <!--input type="button" id="lines" value="LINES" class="badge"/-->
+            <!--input type="button" id="network" value="NETWORK" class="badge"/>-->
+        </div>
+
+
+ 
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidGhhZHVic2RhdmlkIiwiYSI6ImNqdWk4ZHJ5cjBmMHY0NG43MTJpNjJ3d3IifQ.ZJ-oVOrNt0CHXDfVSDQrLw';
+var map = new mapboxgl.Map({
+  // container id specified in the HTML
+  container: 'map',
+  // style URL
+  style: 'mapbox://styles/mapbox/light-v10',
+  // initial position [lon, lat] 
+  center: [8.4120,49.0000],
+  //3D orientation
+  pitch : 50,
+  bearing : -20,
+  zoom: 12.7
+});
+</script>
+ 
+
+        
+        <!-- STATISTICS PopUp LINES------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        
+      
+      
+        <!--Diagrams of lines in KVV Network -->
+        <div id="statisticsLines1">
+          <div id="containerLines1" class="containerLines1"style="opacity: 0.9">
+            <!--h2 id='h2' >STATISTICS BOARD</h2>-->
+            <canvas id="lineChart1"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsLines2" >
+          <div id="containerLines2"  class="containerLines2" style="opacity: 0.9" >
+            <!--h2 id='h2' >STATISTICS BOARD</h2-->
+            <canvas id="lineChart2"></canvas>  
+          </div>        
+        </div>
+
+        <div id="statisticsLines3">
+          <div id="containerLines3" class="containerLines3" style="opacity: 0.9">
+            <!--h2 id='h2' >STATISTICS BOARD</h2>-->
+            <canvas id="lineChart3"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsLines5">
+          <div id="containerLines5" class="containerLines5" style="opacity: 0.9">
+            <!--h2 id="h2" >STATISTICS BOARD</h2>-->
+            <canvas id="lineChart5"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsLinesS1">
+          <div id="containerLinesS1" class="containerLinesS1" style="opacity: 0.9">
+            <!--h2 id="h2" >STATISTICS BOARD</h2-->
+            <canvas id="lineChartS1"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsLinesS2">
+          <div id="containerLinesS2" class="containerLinesS2" style="opacity: 0.9">
+            <!--h2 id="h2" >STATISTICS BOARD</h2--> <!--Pacehoder sits on top  of any statisticslines object -> remove method in line class-->
+            <canvas id="lineChartS2"></canvas>
+          </div>
+        </div>
+      
+        <!-- STATISTICS PopUp SUBS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <!--button id="statisticsBtn" onclick="z()" class="badge">STATISTICS</button>-->
+      
+        <!--Bar charts of suburbs in KVV Network -->
+        <div id="statisticsSub1"> <!--Innen West-->
+          <div id="containerSub1" class="containerSub1"style="opacity: 1">
+            <!--h3 id='h3' >STATISTICS BOARD</h3>-->
+            <canvas id="barChart1"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub2" > <!--Innen Ost-->
+          <div id="containerSub2"  class="containerSub2" style="opacity: 1" >
+            <!--h2 id='h2' >STATISTICS BOARD</h2-->
+            <canvas id="barChart2"></canvas>  
+          </div>        
+        </div>
+
+        <div id="statisticsSub3"> <!--West Far-->
+          <div id="containerSub3" class="containerSub3" style="opacity: 1">
+            <!--h2 id='h2' >STATISTICS BOARD</h2>-->
+            <canvas id="barChart3"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub4"> <!--Sued West-->
+          <div id="containerSub4" class="containerSub4" style="opacity: 1">
+            <!--h2 id="h2" >STATISTICS BOARD</h2>-->
+            <canvas id="barChart4"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub5"> <!-- Nord West-->
+          <div id="containerSub5" class="containerSub5" style="opacity: 1">
+            <!--h2 id="h2" >STATISTICS BOARD</h2-->
+            <canvas id="barChart5"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub6"> <!-- Sued -->
+          <div id="containerSub6" class="containerSub6" style="opacity: 1">
+            <!--h2 id="h2" >STATISTICS BOARD</h2-->
+            <canvas id="barChart6"></canvas>
+          </div>
+        </div>
+
+        <div id="statisticsSub7"> <!-- Nord -->
+          <div id="containerSub7" class="containerSub7" style="opacity: 1">
+            <!--h2 id="h2" >STATISTICS BOARD</h2-->
+            <canvas id="barChart7"></canvas>
+          </div>
+        </div>
+        
+        <div id="statisticsSub8"> <!-- Ost -->
+          <div id="containerSub8" class="containerSub8" style="opacity: 1">
+            <h3 id="h3" >STATISTICS BOARD</h3> <!--Pacehoder sits on top  of any statisticslines object -> remove method in line class-->
+            <canvas id="barChart8"></canvas>
+          </div>
+        </div>
+
+        <!-- ABOUT MODAL ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        
+        
+        
+        <div id="aboutModal" class="abModal">
+
+          <div class="aboutModalContent">
+              <span class="aboutClose">&times;</span>
+              <h7>Web Anwendung im Bereich Visual Analytics</h7>
+              <br>
+              <h8>Ein High Fidelity Prototyp zur Analyse und Monitoring von ÖV Fahrgästen</h8>
+              <p>
+                <br> Der ÖV ist eine Verkehrsleistungskomponente der städtichen Raumentwicklung, an die durch zunehmenden Wachstum der Bevölkerung in Städten und Metropolen deutlich höhere Anforderungen gegestellt wird. Assoziationen hierfür können in der Entwicklung des Modal Split für Verkerhsleistungen im städtischen Gebieten gefunden werden. 
+                <br> Hinblickend auf Mobilitätsentwicklung führt der ÖV an, waren es im Jahr 1994 noch 12,3% stieg die Verkehrsleistung pro Person um nahezu das Doppelte auf 21,8% in 2014 (Quelle: MOP 2014). Durch IV versursachte negative Konsequenzen für Lebensqualität und Einhaltung der Grenzwerte für Luftreinhaltung werden entkräftet auf Basis stagnierende Entwicklungen im IV Modal Split.   
+                <br> Zur Förderung dieser Entwicklung müssen Service, Qualitätssicherheit und Angebot für Fahrgäste sucher gestellt sein. Im der Bürger an Transportgeschwindigkeit, Flexibilität und Angebotsvielfalt. In der Planung und Konzeptionierung werden verschiedenste Modellierungen zur Umsetzung geprüft. 
+                <br> Dabei steht das Verhalten der Fahrgäste eindeutig im Mittelpunkt der Anforderungsstellung und wird als Leitfaden zur Weiterentwicklung betrachtet. Ein Tooling zur Analyse und Monitoring der Fahrgastbewegung im ÖV Netz ist gefordert.
+                <br> - Prognostizierter Besetzunggrad einzelner Stadtlinien
+                <br> - Detailierte Informationen zu Haltestellen
+                <br> - Fahrgastbewegung an Haltestellen und Bezirke
+                <br> - Echtzeit Besetzungsgrad und Besetzungsverlauf
+                <br>
+                <br> Dem Anwender wird durch ein breites Bedienungsfeld an Komponenten und Tooling eine Web-basierte Anwendung bereitgestellt, auf Basis einer Node.js Architketur. 
+                <br> Verschiedene Szenarien zur Analyse und Monitoring der prognostizierten Zahlen können abgedeckt werden, die zur Entscheidungsuntestützung in der Weiterentwicklung des ÖV Netzes oder im on-Demand Einsatz führen. 
+                <br> JSON Datensätze ermöglichen aktuelle Informationen zu Haltestellen zu erhalten, z.B. Fahrgastbewegung, Absatz zur Vorlaufstunde und Schnittstellenanbindung an den aktuellen Fahrplan der Haltestelle. Ein gradierender Farbverlauf gibt Auskunft zum prognostizierten, stündlichen Besetzungsgrad der Linien und der Bezirke.
+                <br> 
+                <br> Developer: David Patrick Adam
+                <br> GitHub: thadubsdavid
+                <br> Hochschule Karlsruhe Technik und Wirtschaft - Institut für Ubiquitäre Mobilitätssysteme
+              </p> 
+          </div>
+
+        </div>
+      
+
+        <!-- MAP MAPBOX ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+        
+       
+
+     
+      <!-- SIDEBAR LINES ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+      <div id='sidebarLine'>
+
+        <div id='lines-content'>
+
+            <div class='line'>
+              <h3>PT -&nbsp;Lines</h3>
+            </div>
+  
+            <div class='line'>
+              <input type='checkbox' id='lin1' value = "1" class='lin'>
+              <span>&nbsp;Tram 1</span>
+            </div>
+            <div class='line'>
+              <input type='checkbox' id='lin2' value="2" class='lin'>
+              <span>&nbsp;Tram 2</span>
+            </div>
+            <div class='line'>
+              <input type='checkbox' id='lin3' class='lin' >
+              <span>&nbsp;Tram 3</span>
+            </div>
+            <div class='line'>
+              <input type='checkbox' id='lin5' class='lin' >
+              <span>&nbsp;Tram 5</span>
+            </div>
+            <div class='line'>
+              <input type='checkbox' id='lin6' class='lin' onclick="return false;" readonly='readonly'>
+              <span>&nbsp;Tram 6</span>
+            </div>
+            <div class='line'>
+              <input type='checkbox' id='linS1' class='lin' >
+              <span>&nbsp;S1</span>
+            </div>
+            <div class='line'>
+              <input type='checkbox' id='linS2' class='lin' >
+              <span>&nbsp;S2</span>
+            </div>
+            <div class='line'>
+              <input type='checkbox' id='linS5' class='lin' onclick="return false;" readonly='readonly'>
+              <span id="s5">&nbsp;S5</span>
+            </div>
+            <div class='line'>
+              <input type='checkbox' id='linS7' class='lin' onclick="return false;" readonly='readonly'>
+              <span id="s7">&nbsp;S7</span>
+            </div>
+            
+          </div>
+  
+        </div>
+
+
+        <!--iSLIDER--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="containerSL">
+            <input type="range" min="0" max="23" value="12" class="slider" id="slider">
+            <span id="ex6CurrentSliderValLabel">Time Analysis Modi: <span id="value"></span>:00 </span>
+           
+        </div>
+        <script type="text/javascript">
+        var slider = document.getElementById("slider");
+        var val= document.getElementById("value");
+
+
+        val.innerHTML=slider.value;
+        slider.oninput=function(){
+        val.innerHTML=this.value;
+        }
+        
+        console.log(val)
+
+     
+        </script>
+       
+
+         
+
+        <!-- bottom bar LIVE MODAL------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+  
+        <nav class="navbar navbar-default navbar-fixed-bottom " role="navigation">
+      
+          <div class="container-fluid">
+            
+             <ul class="navbar-nav">
+             
+              <!--button id="liveBtn" onclick="w()" class="btn btn-danger navbar-btn">LIVE!</button>-->
+            <div class="btn-group btn-group-justified">
+                
+                <p class="navbar-brand">
+                  <span id="project">Passenger Flow Karlsruhe</span>
+                </p>
+
+                
+                
+                <a class="navbar-brand navbar-left">
+                   <div class="livestampShort">
+                    <img src="/images/clock.png" height="20px" width="20px">
+                   </div>
+                </a>
+
+            <div class="col-md-4 col-md-6 text-center">
+                
+                
+                <button id = "liveBtn" type="button" class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#myModal1">LIVE!</button>
+                <button id="statisticsBtn" onclick="z()" class="btn btn-dark navbar-btn">STATISTICS</button>
+                <button id="linesBtn" onclick="x()" class="btn btn-dark navbar-btn">LINES</button>
+                <button id="suburbBtn" onclick="y()" class="btn btn-dark navbar-btn ">NETWORK</button>
+                <button id="aboutBtn" class="btn btn-dark  navbar-btn">ABOUT</button>
+              </div>
+
+            
+                        
+            
+              
+            </div>
+             
+              </ul>
+            
+          </div>
+            
+        </nav>
+       
+        
+        
+          
+<!-- LINES LEGEND------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div id="legendLin">
+          <div id="legendLin" class='map-overlay top'>
+
+              <!--div class='map-overlay-inner'>
+                <h2>#error</h2>
+                <label id='hour'></label>
+                <input id='slider' type='range' min='1' max='24' step='24' value='12' />
+              </div>-->
+  
+              <div id="legendLin" class='map-overlay-inner'>
+                <div id='legend' class='legend'>
+                  
+                  <div> Occupancy rate lines in passsenger [0 - 200]</div>
+                  <div> Density level suburbs in people [0 - 5000]</div>
+                  <div class='bar'></div>
+                </div>
+              </div>
+  
+          </div>
+        </div>
+
+
+      <!-- Modal -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="livestamp"><br></h4>
+              </div>
+              <div class="modal-body">
+                <p id="title">Current occupancy rate of Tram 1 in [%]</p>
+                
+                <!--div id="container"></div>-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <div class="progressbar">
+                            <div class="second circle" data-percent="77">
+                              <strong></strong>
+                              <span>Oberreut- <br> Durlach</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                          <div class="progressbar">
+                            <div class="second circle" data-percent="55">
+                              <strong></strong>
+                              <span>Durlach- <br> Oberreut</span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
+            <div class="modal-body">
+                <div class="chartModal">
+                  <div class="row">
+                    <div class="lineChartModalLeft">
+                      <canvas id="lineChart11"></canvas>
+                      <canvas id="lineChart12"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-prev">Prev</button>
+                <button type="button" class="btn btn-default btn-next">Next</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script> 
+    
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="livestamp"><br></h4>
+            </div>
+            <div class="modal-body" >
+              <p id="title">Current occupancy rate of Tram 2 in [%]</p>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-4">
+                          <div class="progressbar">
+                          <div class="second circle" data-percent="44">
+                            <strong></strong>
+                            <span>Siemensallee- <br> Wolfartsweier</span>
+                          </div>
+                          </div>
+                      </div>
+                      
+                      <div class="col-sm-4">
+                          <div class="progressbar">
+                          <div class="second circle" data-percent="25">
+                            <strong></strong>
+                            <span>Wolfartsweier- <br> Siemensallee</span>
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="modal-body" >
+                      <div class="chartModal">
+                        <div class="row">
+                          <div class="lineChartModalLeft">
+                            <canvas id="lineChart21"></canvas>
+                            <canvas id="lineChart22"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-prev">Prev</button>
+              <button type="button" class="btn btn-default btn-next">Next</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Button trigger modal -->
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="livestamp"><br></h4>
+            </div>
+            <div class="modal-body">
+                <p id="title">Current occupancy rate of Tram 3 in [%]</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="progressbar">
+                            <div class="second circle" data-percent="22">
+                              <strong></strong>
+                              <span>Heide- <br> Tivoli</span>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="progressbar">
+                            <div class="second circle" data-percent="66">
+                              <strong></strong>
+                              <span>Tivoli- <br> Heide</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="chartModal">
+                              <div class="row">
+                                <div class="lineChartModalLeft">
+                                  <canvas id="lineChartX"></canvas>
+                                  <canvas id="lineChartY"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-prev">Prev</button>
+              <button type="button" class="btn btn-default btn-next">Next</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Button trigger modal -->
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="livestamp"><br></h4>
+            </div>
+            <div class="modal-body">
+                <p id="title">Current occupancy rate of Tram 5 in [%]</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="progressbar">
+                            <div class="second circle" data-percent="38">
+                              <strong></strong>
+                              <span>Rheinhafen- <br> Rintheim</span>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div class="progressbar">
+                            <div class="second circle" data-percent="35">
+                              <strong></strong>
+                              <span>Rintheim- <br> Rheinhafen</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="chartModal">
+                              <div class="row">
+                                <div class="lineChartModalLeft">
+                                  <canvas id="lineChartX"></canvas>
+                                  <canvas id="lineChartY"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-prev">Prev</button>
+              <button type="button" class="btn btn-default btn-next">Next</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="livestamp"><br></h4>
+              </div>
+              <div class="modal-body">
+                  <p id="title">Current occupancy rate of S2 in [%]</p>
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <div class="progressbar">
+                              <div class="second circle" data-percent="53">
+                                <strong></strong>
+                                <span>Rheinstetten- <br> Spöck</span>
+                              </div>
+                              </div>
+                          </div>
+                          
+                          <div class="col-sm-4">
+                              <div class="progressbar">
+                              <div class="second circle" data-percent="61">
+                                <strong></strong>
+                                <span>Spöck- <br> Rheinstetten</span>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="modal-body">
+                              <div class="chartModal">
+                                <div class="row">
+                                  <div class="lineChartModalLeft">
+                                    <canvas id="lineChartX"></canvas>
+                                    <canvas id="lineChartY"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-prev">Prev</button>
+                <button type="button" class="btn btn-default btn-next">Next</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="livestamp"><br></h4>
+              </div>
+              <div class="modal-body">
+                  <p id="title">Current occupancy rate of Tram S1/ S11 in [%]</p>
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <div class="progressbar">
+                              <div class="second circle" data-percent="78">
+                                <strong></strong>
+                                <span>Neureut- <br> Ettlingen</span>
+                              </div>
+                              </div>
+                          </div>
+                          
+                          <div class="col-sm-4">
+                              <div class="progressbar">
+                              <div class="second circle" data-percent="58">
+                                <strong></strong>
+                                <span>Ettlingen- <br> Neureut</span>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="modal-body">
+                              <div class="chartModal">
+                                <div class="row">
+                                  <div class="lineChartModalLeft">
+                                    <canvas id="lineChartX"></canvas>
+                                    <canvas id="lineChartY"></canvas>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-prev">Prev</button>
+                <button type="button" class="btn btn-default btn-next">Next</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      <!-- SIDEBAR SUBURBS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+        <div id='sidebarSuburb'>
+
+          <div id='suburb-content'>
+  
+              <div class='suburb'>
+                <h3>Karlsruhe -&nbsp;Suburbs</h3>
+              </div>
+    
+              <div class='suburb'>
+                <input type='checkbox' id='sub1' class='sub' >
+                <span>&nbsp;Innenstadt West</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub2' class='sub' >
+                <span>&nbsp;Innenstadt Ost</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub3' class='sub' >
+                <span>&nbsp;Nordstadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub4' class='sub' >
+                <span>&nbsp;Weststadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub5'  class='sub'>
+                <span>&nbsp;Oststadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub6'  class='sub' >
+                <span>&nbsp;Südstadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub7' class='sub' >
+                <span>&nbsp;Nordweststadt</span>
+              </div>
+              <div class='suburb'>
+                <input type='checkbox' id='sub8' class='sub' >
+                <span>&nbsp;Südweststadt</span>
+              </div>
+              
+          </div>
+    
+        </div>
+
+ 
+        
+        <!--SLIDER------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+        <div id="slider3"></div>
+        
+        <div id="json">
+          <a href="geodata/testStops.json"></a>
+        </div>
+
+
+        <!--APP LIBRARIES--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
+        
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+        
+        <!--script src="/javascripts/app.js"></script>-->
+        <script src="/javascripts/lines.js"></script>
+        <script src="/javascripts/suburb.js"></script>
+        <script src="/javascripts/aboutModal.js"></script>
+        <script src="/javascripts/liveModal.js"></script>
+        <script src="/javascripts/sidebar.js"></script>
+        <script src="/javascripts/statisticsLines.js"></script>
+        <script src="/javascripts/statisticsBoard.js"></script>
+        <script src="/javascripts/statisticsSuburb.js"></script>
+        <script src="/javascripts/statisticsLive.js"></script>
+        <!--script src="scripts/networkStops.js"></script>-->
+        <script src="/geodata/stopsInnenOst.json"></script>
+        <script src="/javascripts/dummyData.js"></script>
+        <script src="javascripts/geojson.js"></script>
+        <script src="/javascripts/stops.js"></script>
+        
+      
+    </body>
+  
+  
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
